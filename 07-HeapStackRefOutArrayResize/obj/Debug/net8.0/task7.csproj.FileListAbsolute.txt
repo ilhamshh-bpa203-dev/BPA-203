@@ -1,0 +1,42 @@
+C:\Users\Ilham\Desktop\New Folder\task7\bin\Debug\net8.0\task7.exe
+C:\Users\Ilham\Desktop\New Folder\task7\bin\Debug\net8.0\task7.deps.json
+C:\Users\Ilham\Desktop\New Folder\task7\bin\Debug\net8.0\task7.runtimeconfig.json
+C:\Users\Ilham\Desktop\New Folder\task7\bin\Debug\net8.0\task7.dll
+C:\Users\Ilham\Desktop\New Folder\task7\bin\Debug\net8.0\task7.pdb
+C:\Users\Ilham\Desktop\New Folder\task7\obj\Debug\net8.0\task7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ilham\Desktop\New Folder\task7\obj\Debug\net8.0\task7.AssemblyInfoInputs.cache
+C:\Users\Ilham\Desktop\New Folder\task7\obj\Debug\net8.0\task7.AssemblyInfo.cs
+C:\Users\Ilham\Desktop\New Folder\task7\obj\Debug\net8.0\task7.csproj.CoreCompileInputs.cache
+C:\Users\Ilham\Desktop\New Folder\task7\obj\Debug\net8.0\task7.dll
+C:\Users\Ilham\Desktop\New Folder\task7\obj\Debug\net8.0\refint\task7.dll
+C:\Users\Ilham\Desktop\New Folder\task7\obj\Debug\net8.0\task7.pdb
+C:\Users\Ilham\Desktop\New Folder\task7\obj\Debug\net8.0\task7.genruntimeconfig.cache
+C:\Users\Ilham\Desktop\New Folder\task7\obj\Debug\net8.0\ref\task7.dll
+C:\Users\Ilham\Desktop\task7\bin\Debug\net8.0\task7.exe
+C:\Users\Ilham\Desktop\task7\bin\Debug\net8.0\task7.deps.json
+C:\Users\Ilham\Desktop\task7\bin\Debug\net8.0\task7.runtimeconfig.json
+C:\Users\Ilham\Desktop\task7\bin\Debug\net8.0\task7.dll
+C:\Users\Ilham\Desktop\task7\bin\Debug\net8.0\task7.pdb
+C:\Users\Ilham\Desktop\task7\obj\Debug\net8.0\task7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ilham\Desktop\task7\obj\Debug\net8.0\task7.AssemblyInfoInputs.cache
+C:\Users\Ilham\Desktop\task7\obj\Debug\net8.0\task7.AssemblyInfo.cs
+C:\Users\Ilham\Desktop\task7\obj\Debug\net8.0\task7.csproj.CoreCompileInputs.cache
+C:\Users\Ilham\Desktop\task7\obj\Debug\net8.0\task7.dll
+C:\Users\Ilham\Desktop\task7\obj\Debug\net8.0\refint\task7.dll
+C:\Users\Ilham\Desktop\task7\obj\Debug\net8.0\task7.pdb
+C:\Users\Ilham\Desktop\task7\obj\Debug\net8.0\task7.genruntimeconfig.cache
+C:\Users\Ilham\Desktop\task7\obj\Debug\net8.0\ref\task7.dll
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\bin\Debug\net8.0\task7.exe
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\bin\Debug\net8.0\task7.deps.json
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\bin\Debug\net8.0\task7.runtimeconfig.json
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\bin\Debug\net8.0\task7.dll
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\bin\Debug\net8.0\task7.pdb
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\obj\Debug\net8.0\task7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\obj\Debug\net8.0\task7.AssemblyInfoInputs.cache
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\obj\Debug\net8.0\task7.AssemblyInfo.cs
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\obj\Debug\net8.0\task7.csproj.CoreCompileInputs.cache
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\obj\Debug\net8.0\task7.dll
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\obj\Debug\net8.0\refint\task7.dll
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\obj\Debug\net8.0\task7.pdb
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\obj\Debug\net8.0\task7.genruntimeconfig.cache
+C:\Users\Ilham\Desktop\07-HeapStackRefOutArrayResize\obj\Debug\net8.0\ref\task7.dll
