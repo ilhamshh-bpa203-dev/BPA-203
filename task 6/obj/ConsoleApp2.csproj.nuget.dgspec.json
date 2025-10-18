@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ilham\\Desktop\\praktika\\ConsoleApp2\\ConsoleApp2.csproj": {}
+    "C:\\Users\\Ilham\\Desktop\\BPA-203\\task 6\\ConsoleApp2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ilham\\Desktop\\praktika\\ConsoleApp2\\ConsoleApp2.csproj": {
+    "C:\\Users\\Ilham\\Desktop\\BPA-203\\task 6\\ConsoleApp2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ilham\\Desktop\\praktika\\ConsoleApp2\\ConsoleApp2.csproj",
+        "projectUniqueName": "C:\\Users\\Ilham\\Desktop\\BPA-203\\task 6\\ConsoleApp2.csproj",
         "projectName": "ConsoleApp2",
-        "projectPath": "C:\\Users\\Ilham\\Desktop\\praktika\\ConsoleApp2\\ConsoleApp2.csproj",
+        "projectPath": "C:\\Users\\Ilham\\Desktop\\BPA-203\\task 6\\ConsoleApp2.csproj",
         "packagesPath": "C:\\Users\\Ilham\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ilham\\Desktop\\praktika\\ConsoleApp2\\obj\\",
+        "outputPath": "C:\\Users\\Ilham\\Desktop\\BPA-203\\task 6\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

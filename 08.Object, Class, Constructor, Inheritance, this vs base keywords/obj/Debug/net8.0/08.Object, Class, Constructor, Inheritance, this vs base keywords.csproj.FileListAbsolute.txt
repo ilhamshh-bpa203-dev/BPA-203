@@ -1,0 +1,15 @@
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\obj\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\obj\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.AssemblyInfoInputs.cache
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\obj\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.AssemblyInfo.cs
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\obj\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj.CoreCompileInputs.cache
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\obj\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.sourcelink.json
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\bin\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.exe
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\bin\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.deps.json
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\bin\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.runtimeconfig.json
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\bin\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.dll
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\bin\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.pdb
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\obj\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.dll
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\obj\Debug\net8.0\refint\08.Object, Class, Constructor, Inheritance, this vs base keywords.dll
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\obj\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.pdb
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\obj\Debug\net8.0\08.Object, Class, Constructor, Inheritance, this vs base keywords.genruntimeconfig.cache
+C:\Users\Ilham\Desktop\BPA-203\08.Object, Class, Constructor, Inheritance, this vs base keywords\obj\Debug\net8.0\ref\08.Object, Class, Constructor, Inheritance, this vs base keywords.dll

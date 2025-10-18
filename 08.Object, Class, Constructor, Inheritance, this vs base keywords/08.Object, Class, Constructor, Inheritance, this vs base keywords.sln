@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Object, Class, Constructor, Inheritance, this vs base keywords", "08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj", "{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D41A19DC-EDD7-4796-93D6-342B4F3A69D4}
+	EndGlobalSection
+EndGlobal
