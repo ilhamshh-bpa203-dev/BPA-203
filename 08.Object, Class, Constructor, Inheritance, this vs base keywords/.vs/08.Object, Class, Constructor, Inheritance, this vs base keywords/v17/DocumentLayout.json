@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|c:\\users\\ilham\\desktop\\bpa-203\\08.object, class, constructor, inheritance, this vs base keywords\\school\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|solutionrelative:school\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|c:\\users\\ilham\\desktop\\bpa-203\\08.object, class, constructor, inheritance, this vs base keywords\\school\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|solutionrelative:school\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|c:\\users\\ilham\\desktop\\bpa-203\\08.object, class, constructor, inheritance, this vs base keywords\\school\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|solutionrelative:school\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|c:\\users\\ilham\\desktop\\bpa-203\\08.object, class, constructor, inheritance, this vs base keywords\\school\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|solutionrelative:school\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|c:\\users\\ilham\\desktop\\bpa-203\\08.object, class, constructor, inheritance, this vs base keywords\\school\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|solutionrelative:school\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CD866CD-2523-4A6D-AC17-1C5770ACEE16}|08.Object, Class, Constructor, Inheritance, this vs base keywords.csproj|c:\\users\\ilham\\desktop\\bpa-203\\08.object, class, constructor, inheritance, this vs base keywords\\school\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,16 +34,28 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\08.Object, Class, Constructor, Inheritance, this vs base keywords\\school\\Person.cs",
               "RelativeDocumentMoniker": "school\\Person.cs",
               "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\08.Object, Class, Constructor, Inheritance, this vs base keywords\\school\\Person.cs",
               "RelativeToolTip": "school\\Person.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBsAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-18T15:58:31.146Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "teacher.cs",
+              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\08.Object, Class, Constructor, Inheritance, this vs base keywords\\school\\teacher.cs",
+              "RelativeDocumentMoniker": "school\\teacher.cs",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\08.Object, Class, Constructor, Inheritance, this vs base keywords\\school\\teacher.cs",
+              "RelativeToolTip": "school\\teacher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T15:57:44.922Z"
             },
             {
               "$type": "Document",
@@ -53,23 +65,9 @@
               "RelativeDocumentMoniker": "school\\Administrator.cs",
               "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\08.Object, Class, Constructor, Inheritance, this vs base keywords\\school\\Administrator.cs",
               "RelativeToolTip": "school\\Administrator.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwBoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T15:58:11.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "teacher.cs",
-              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\08.Object, Class, Constructor, Inheritance, this vs base keywords\\school\\teacher.cs",
-              "RelativeDocumentMoniker": "school\\teacher.cs",
-              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\08.Object, Class, Constructor, Inheritance, this vs base keywords\\school\\teacher.cs",
-              "RelativeToolTip": "school\\teacher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T15:57:44.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-18T15:58:11.274Z"
             },
             {
               "$type": "Document",
@@ -79,7 +77,7 @@
               "RelativeDocumentMoniker": "school\\student.cs",
               "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\08.Object, Class, Constructor, Inheritance, this vs base keywords\\school\\student.cs",
               "RelativeToolTip": "school\\student.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwBwAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-18T15:56:44.466Z",
               "EditorCaption": ""
@@ -92,7 +90,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\08.Object, Class, Constructor, Inheritance, this vs base keywords\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwDAAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-18T15:55:53.379Z",
               "EditorCaption": ""

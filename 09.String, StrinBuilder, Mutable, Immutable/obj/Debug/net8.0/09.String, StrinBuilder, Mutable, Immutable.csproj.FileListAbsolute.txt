@@ -1,0 +1,15 @@
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\bin\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.exe
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\bin\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.deps.json
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\bin\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.runtimeconfig.json
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\bin\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.dll
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\bin\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.pdb
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\obj\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\obj\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.AssemblyInfoInputs.cache
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\obj\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.AssemblyInfo.cs
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\obj\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.csproj.CoreCompileInputs.cache
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\obj\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.sourcelink.json
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\obj\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.dll
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\obj\Debug\net8.0\refint\09.String, StrinBuilder, Mutable, Immutable.dll
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\obj\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.pdb
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\obj\Debug\net8.0\09.String, StrinBuilder, Mutable, Immutable.genruntimeconfig.cache
+C:\Users\Ilham\Desktop\BPA-203\09.String, StrinBuilder, Mutable, Immutable\obj\Debug\net8.0\ref\09.String, StrinBuilder, Mutable, Immutable.dll
