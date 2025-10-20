@@ -19,11 +19,6 @@ namespace task3
                 }
                 else
                 {
-                    if (str1.Length > maxstr.Length)
-                    {
-                        maxstr = str1;
-                        
-                    }
                     str1 = "";
                 }
                 if (str1.Length > maxstr.Length)
