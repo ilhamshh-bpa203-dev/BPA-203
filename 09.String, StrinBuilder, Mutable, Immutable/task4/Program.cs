@@ -33,8 +33,8 @@
                 {
                     Console.WriteLine($"{word}, index {i}");
                 }
+                
 
-              
             }
 
         }

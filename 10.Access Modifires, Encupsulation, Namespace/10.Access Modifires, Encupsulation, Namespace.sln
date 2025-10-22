@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Access Modifires, Encupsulation, Namespace", "10.Access Modifires, Encupsulation, Namespace.csproj", "{AF9A744B-519A-4CA7-9833-DC57FFE6F467}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF9A744B-519A-4CA7-9833-DC57FFE6F467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9A744B-519A-4CA7-9833-DC57FFE6F467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9A744B-519A-4CA7-9833-DC57FFE6F467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9A744B-519A-4CA7-9833-DC57FFE6F467}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9B61705-4CEA-43C5-94F8-85BEEB66FC50}
+	EndGlobalSection
+EndGlobal

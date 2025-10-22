@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ilham\\Desktop\\BPA-203\\10.Access Modifires, Encupsulation, Namespace\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AF9A744B-519A-4CA7-9833-DC57FFE6F467}|10.Access Modifires, Encupsulation, Namespace.csproj|c:\\users\\ilham\\desktop\\bpa-203\\10.access modifires, encupsulation, namespace\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF9A744B-519A-4CA7-9833-DC57FFE6F467}|10.Access Modifires, Encupsulation, Namespace.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF9A744B-519A-4CA7-9833-DC57FFE6F467}|10.Access Modifires, Encupsulation, Namespace.csproj|c:\\users\\ilham\\desktop\\bpa-203\\10.access modifires, encupsulation, namespace\\carhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF9A744B-519A-4CA7-9833-DC57FFE6F467}|10.Access Modifires, Encupsulation, Namespace.csproj|solutionrelative:carhp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF9A744B-519A-4CA7-9833-DC57FFE6F467}|10.Access Modifires, Encupsulation, Namespace.csproj|c:\\users\\ilham\\desktop\\bpa-203\\10.access modifires, encupsulation, namespace\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF9A744B-519A-4CA7-9833-DC57FFE6F467}|10.Access Modifires, Encupsulation, Namespace.csproj|solutionrelative:car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\10.Access Modifires, Encupsulation, Namespace\\Car.cs",
+              "RelativeDocumentMoniker": "Car.cs",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\10.Access Modifires, Encupsulation, Namespace\\Car.cs",
+              "RelativeToolTip": "Car.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T06:30:20.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CarHP.cs",
+              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\10.Access Modifires, Encupsulation, Namespace\\CarHP.cs",
+              "RelativeDocumentMoniker": "CarHP.cs",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\10.Access Modifires, Encupsulation, Namespace\\CarHP.cs",
+              "RelativeToolTip": "CarHP.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T06:18:15.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\10.Access Modifires, Encupsulation, Namespace\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\10.Access Modifires, Encupsulation, Namespace\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T06:17:29.397Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

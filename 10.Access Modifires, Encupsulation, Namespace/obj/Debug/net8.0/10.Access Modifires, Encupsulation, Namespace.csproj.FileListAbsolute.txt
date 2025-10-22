@@ -1,0 +1,15 @@
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\bin\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.exe
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\bin\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.deps.json
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\bin\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.runtimeconfig.json
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\bin\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.dll
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\bin\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.pdb
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\obj\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\obj\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.AssemblyInfoInputs.cache
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\obj\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.AssemblyInfo.cs
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\obj\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.csproj.CoreCompileInputs.cache
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\obj\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.sourcelink.json
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\obj\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.dll
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\obj\Debug\net8.0\refint\10.Access Modifires, Encupsulation, Namespace.dll
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\obj\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.pdb
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\obj\Debug\net8.0\10.Access Modifires, Encupsulation, Namespace.genruntimeconfig.cache
+C:\Users\Ilham\Desktop\BPA-203\10.Access Modifires, Encupsulation, Namespace\obj\Debug\net8.0\ref\10.Access Modifires, Encupsulation, Namespace.dll
