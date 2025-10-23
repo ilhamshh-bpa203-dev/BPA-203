@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Tasks")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("10.Access Modifires, Encupsulation, Namespace")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02bd729eab49863f5d4e6c0edfb196ce18f03208")]
-[assembly: System.Reflection.AssemblyProductAttribute("Tasks")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Tasks")]
+[assembly: System.Reflection.AssemblyProductAttribute("10.Access Modifires, Encupsulation, Namespace")]
+[assembly: System.Reflection.AssemblyTitleAttribute("10.Access Modifires, Encupsulation, Namespace")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment sınıfı tarafından oluşturuldu.
