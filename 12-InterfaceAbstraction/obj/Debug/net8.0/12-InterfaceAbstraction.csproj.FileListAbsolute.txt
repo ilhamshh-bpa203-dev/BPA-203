@@ -1,0 +1,15 @@
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\bin\Debug\net8.0\12-InterfaceAbstraction.exe
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\bin\Debug\net8.0\12-InterfaceAbstraction.deps.json
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\bin\Debug\net8.0\12-InterfaceAbstraction.runtimeconfig.json
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\bin\Debug\net8.0\12-InterfaceAbstraction.dll
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\bin\Debug\net8.0\12-InterfaceAbstraction.pdb
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\obj\Debug\net8.0\12-InterfaceAbstraction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\obj\Debug\net8.0\12-InterfaceAbstraction.AssemblyInfoInputs.cache
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\obj\Debug\net8.0\12-InterfaceAbstraction.AssemblyInfo.cs
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\obj\Debug\net8.0\12-InterfaceAbstraction.csproj.CoreCompileInputs.cache
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\obj\Debug\net8.0\12-InterfaceAbstraction.sourcelink.json
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\obj\Debug\net8.0\12-InterfaceAbstraction.dll
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\obj\Debug\net8.0\refint\12-InterfaceAbstraction.dll
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\obj\Debug\net8.0\12-InterfaceAbstraction.pdb
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\obj\Debug\net8.0\12-InterfaceAbstraction.genruntimeconfig.cache
+C:\Users\Ilham\Desktop\BPA-203\12-InterfaceAbstraction\obj\Debug\net8.0\ref\12-InterfaceAbstraction.dll
