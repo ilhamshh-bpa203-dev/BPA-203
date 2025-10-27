@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\13-nullableenumstruct\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\13-nullableenumstruct\\cafe\\drinksize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|solutionrelative:cafe\\drinksize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\13-nullableenumstruct\\cafe\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|solutionrelative:cafe\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\13-nullableenumstruct\\cafe\\drinktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|solutionrelative:cafe\\drinktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\13-nullableenumstruct\\cafe\\drinkorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|solutionrelative:cafe\\drinkorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DrinkOrder.cs",
+              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\DrinkOrder.cs",
+              "RelativeDocumentMoniker": "Cafe\\DrinkOrder.cs",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\DrinkOrder.cs",
+              "RelativeToolTip": "Cafe\\DrinkOrder.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T17:25:47.428Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DrinkType.cs",
+              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\DrinkType.cs",
+              "RelativeDocumentMoniker": "Cafe\\DrinkType.cs",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\DrinkType.cs",
+              "RelativeToolTip": "Cafe\\DrinkType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T17:18:16.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DrinkSize.cs",
+              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\DrinkSize.cs",
+              "RelativeDocumentMoniker": "Cafe\\DrinkSize.cs",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\DrinkSize.cs",
+              "RelativeToolTip": "Cafe\\DrinkSize.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T17:20:10.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "Cafe\\OrderStatus.cs",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\OrderStatus.cs",
+              "RelativeToolTip": "Cafe\\OrderStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T17:21:09.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwEAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T17:17:11.683Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

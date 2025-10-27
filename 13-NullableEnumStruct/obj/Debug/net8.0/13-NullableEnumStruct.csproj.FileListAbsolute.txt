@@ -1,0 +1,15 @@
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\bin\Debug\net8.0\13-NullableEnumStruct.exe
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\bin\Debug\net8.0\13-NullableEnumStruct.deps.json
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\bin\Debug\net8.0\13-NullableEnumStruct.runtimeconfig.json
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\bin\Debug\net8.0\13-NullableEnumStruct.dll
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\bin\Debug\net8.0\13-NullableEnumStruct.pdb
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\obj\Debug\net8.0\13-NullableEnumStruct.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\obj\Debug\net8.0\13-NullableEnumStruct.AssemblyInfoInputs.cache
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\obj\Debug\net8.0\13-NullableEnumStruct.AssemblyInfo.cs
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\obj\Debug\net8.0\13-NullableEnumStruct.csproj.CoreCompileInputs.cache
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\obj\Debug\net8.0\13-NullableEnumStruct.sourcelink.json
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\obj\Debug\net8.0\13-NullableEnumStruct.dll
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\obj\Debug\net8.0\refint\13-NullableEnumStruct.dll
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\obj\Debug\net8.0\13-NullableEnumStruct.pdb
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\obj\Debug\net8.0\13-NullableEnumStruct.genruntimeconfig.cache
+C:\Users\Ilham\Desktop\BPA-203\13-NullableEnumStruct\obj\Debug\net8.0\ref\13-NullableEnumStruct.dll
