@@ -8,62 +8,63 @@ namespace _13_NullableEnumStruct.Cafe
 {
     internal class DrinkOrder
     {
-        public int orderNumber;
-        public string customerName;
-        public DrinkType drink;
-        public DrinkSize size;
-        public OrderStatus status;
-        public decimal price;
+        public int OrderNumber { get; set; }
+        public string CustomerName { get; set; }
+        public DrinkType Drink { get; set; }
+        public DrinkSize Size { get; set; }
+        public OrderStatus Status { get; set; }
+        public decimal Price { get; set; }
         public static int count;
+        
+
 
         public DrinkOrder(int orderNumber, string customerName, DrinkType drink, DrinkSize size)
         {
-            this.orderNumber = orderNumber;
-            this.customerName = customerName;
-            this.drink = drink;
-            this.size = size;
-            //status = new OrderStatus();
+           OrderNumber = orderNumber;
+            CustomerName = customerName;
+            Drink = drink;
+            Size = size;
             count++;
 
         }
         public decimal CalculatePrice()
         {
-            switch (drink)
+            switch (Drink)
             {
                 case DrinkType.Coffee:
 
-                    switch (size)
+                    switch (Size)
                     {
-                        case DrinkSize.Small: price = 3; break;
-                        case DrinkSize.Medium: price = 4; break;
-                        case DrinkSize.Large: price = 5; break;
+                        case DrinkSize.Small: Price = 3; break;
+                        case DrinkSize.Medium: Price = 4; break;
+                        case DrinkSize.Large: Price = 5; break;
                         default: Console.WriteLine("Invalid size."); break;
                     }
                     break;
                 case DrinkType.Tea:
-                    switch (size)
+                    switch (Size)
                     {
-                        case DrinkSize.Small: price = 2; break;
-                        case DrinkSize.Medium: price = 3; break;
-                        case DrinkSize.Large: price = 4; break;
+                        case DrinkSize.Small: Price = 2; break;
+                        case DrinkSize.Medium: Price = 3; break;
+                        case DrinkSize.Large: Price = 4; break;
                         default: Console.WriteLine("Invalid size."); break;
                     }
                     break;
                 case DrinkType.Juice:
-                    switch (size)
+                    switch (Size)
                     {
-                        case DrinkSize.Small: price = 4; break;
-                        case DrinkSize.Medium: price = 5; break;
-                        case DrinkSize.Large: price = 6; break;
+                        case DrinkSize.Small: Price = 4; break;
+                        case DrinkSize.Medium: Price = 5; break;
+                        case DrinkSize.Large: Price = 6; break;
                         default: Console.WriteLine("Invalid size."); break;
                     }
                     break;
                 case DrinkType.Water:
-                    switch (size)
+                    switch (Size)
                     {
-                        case DrinkSize.Small: price = 1; break;
-                        case DrinkSize.Medium: price = 1.5m; break;
-                        case DrinkSize.Large: price = 2; break;
+                        case DrinkSize.Small: Price = 1; break;
+                        case DrinkSize.Medium: Price = 1.5m; break;
+                        case DrinkSize.Large: Price = 2; break;
                         default: Console.WriteLine("Invalid size."); break;
                     }
                     break;
@@ -71,7 +72,7 @@ namespace _13_NullableEnumStruct.Cafe
                     Console.WriteLine("Invalid drink.");
                     break;
             }
-            return price;
+            return Price;
 
 
         }
@@ -79,14 +80,14 @@ namespace _13_NullableEnumStruct.Cafe
 
         public void UpdateStatus(OrderStatus newStatus)
         {
-            status = newStatus;
-            Console.WriteLine($"Sifaris #{orderNumber} statusu: {newStatus}");
+            Status = newStatus;
+            Console.WriteLine($"Sifaris #{OrderNumber} statusu: {newStatus}");
         }
 
 
         public void DisplayOrder()
         {
-            Console.WriteLine($"{customerName},your order is {size} {drink}.Number #{orderNumber}");
+            Console.WriteLine($"{CustomerName},your order is {Size} {Drink}.Number #{OrderNumber}");
             Console.WriteLine($"Price of order is {CalculatePrice()} azn");
         }
 
