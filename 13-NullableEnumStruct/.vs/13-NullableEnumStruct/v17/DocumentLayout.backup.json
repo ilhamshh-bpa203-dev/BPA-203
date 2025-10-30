@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|solutionrelative:cafe\\drinkorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\13-nullableenumstruct\\cafe\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|solutionrelative:cafe\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\13-nullableenumstruct\\cafe\\drinktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|solutionrelative:cafe\\drinktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\13-nullableenumstruct\\cafe\\drinksize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|solutionrelative:cafe\\drinksize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\13-nullableenumstruct\\cafe\\drinktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|solutionrelative:cafe\\drinktype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\13-nullableenumstruct\\cafe\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|solutionrelative:cafe\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DB9FF40-D3D5-437C-858A-A588BA9F30BE}|13-NullableEnumStruct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\13-nullableenumstruct\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,9 +38,9 @@
               "Title": "DrinkOrder.cs",
               "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\DrinkOrder.cs",
               "RelativeDocumentMoniker": "Cafe\\DrinkOrder.cs",
-              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\DrinkOrder.cs*",
-              "RelativeToolTip": "Cafe\\DrinkOrder.cs*",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAUwFoAAABWAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\DrinkOrder.cs",
+              "RelativeToolTip": "Cafe\\DrinkOrder.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAADwvxoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T17:25:47.428Z",
               "IsPinned": true,
@@ -48,7 +48,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "DrinkType.cs",
               "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\DrinkType.cs",
               "RelativeDocumentMoniker": "Cafe\\DrinkType.cs",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "OrderStatus.cs",
               "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Cafe\\OrderStatus.cs",
               "RelativeDocumentMoniker": "Cafe\\OrderStatus.cs",
@@ -93,7 +93,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\13-NullableEnumStruct\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAQwAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T17:17:11.683Z",
               "EditorCaption": ""
