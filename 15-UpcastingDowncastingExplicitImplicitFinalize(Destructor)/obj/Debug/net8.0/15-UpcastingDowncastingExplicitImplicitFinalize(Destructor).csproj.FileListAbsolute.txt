@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\bin\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).exe
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\bin\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).deps.json
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\bin\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).runtimeconfig.json
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\bin\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).dll
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\bin\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).pdb
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\obj\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\obj\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).AssemblyInfoInputs.cache
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\obj\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).AssemblyInfo.cs
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\obj\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\obj\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).sourcelink.json
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\obj\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).dll
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\obj\Debug\net8.0\refint\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).dll
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\obj\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).pdb
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\obj\Debug\net8.0\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).genruntimeconfig.cache
+C:\Users\user\Desktop\BPA-203\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)\obj\Debug\net8.0\ref\15-UpcastingDowncastingExplicitImplicitFinalize(Destructor).dll
