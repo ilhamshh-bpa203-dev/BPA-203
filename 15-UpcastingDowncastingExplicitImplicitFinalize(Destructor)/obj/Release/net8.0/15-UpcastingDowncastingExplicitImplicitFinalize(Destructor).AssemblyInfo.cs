@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84b7c97136ac438f41d2c8f6344b37a8d76f13ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("15-UpcastingDowncastingExplicitImplicitFinalize(Destructor)")]
