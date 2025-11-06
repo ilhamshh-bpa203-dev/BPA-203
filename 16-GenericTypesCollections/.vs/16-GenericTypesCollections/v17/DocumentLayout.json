@@ -42,8 +42,7 @@
               "RelativeToolTip": "Library management\\Member.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAIwDYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T08:47:00.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T08:47:00.762Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "Library management\\Book.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAA5wBkAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T08:38:56.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T08:38:56.961Z"
             },
             {
               "$type": "Document",
@@ -68,8 +66,7 @@
               "RelativeToolTip": "Library management\\BookManager.cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAswGgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T12:56:56.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T12:56:56.957Z"
             },
             {
               "$type": "Document",
@@ -81,8 +78,7 @@
               "RelativeToolTip": "Library management\\Library.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAmwB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T11:53:16.609Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T11:53:16.609Z"
             },
             {
               "$type": "Document",
@@ -92,7 +88,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\16-GenericTypesCollections\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAAAIwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAUwIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-02T08:32:23.26Z",
               "EditorCaption": ""
