@@ -1,0 +1,97 @@
+body {
+    background-image: linear-gradient(to right, cyan, purple);
+    background-attachment: fixed;
+
+}
+
+
+.Login-card {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 5%;
+}
+
+
+.exit {
+
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+    font-family: monospace;
+
+    .x {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+.contact {
+    margin-left: 6px;
+
+}
+
+.password {
+    margin-left: 6px;
+}
+
+.contact-input {
+    padding: 6px;
+    width: 96%;
+    border: 2px solid gray;
+    margin: 6px 0px
+}
+
+.forgot-password {
+    margin-left: 6px;
+    font-size: 12px;
+}
+
+.login-back {
+    background-image: linear-gradient(to right, cyan, purple);
+    border: linear-gradient(to right, cyan, purple);
+    height: 30px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+
+
+}
+
+
+.login-text {
+    color: rgb(232, 226, 226);
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    .lg {
+        text-decoration: none;
+        color: rgb(232, 226, 226);
+    }
+}
+
+
+.new-signup {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.notmem-text {}
+
+
+.signup-text {
+
+    padding: 12px;
+}

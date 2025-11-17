@@ -1,1 +1,37 @@
-[{"ID":1,"Name":"Ali","Surname":"M\u0259mm\u0259dov","Age":20,"Grade":85.5},{"ID":2,"Name":"Leyla","Surname":"H\u0259s\u0259nova","Age":19,"Grade":92},{"ID":3,"Name":"V\u00FCqar","Surname":"\u018Fliyev","Age":21,"Grade":78.5},{"ID":3,"Name":"Nigar","Surname":"\u018Fhm\u0259dova","Age":20,"Grade":88},{"ID":4,"Name":"R\u0259\u015Fad","Surname":"Quliyev","Age":22,"Grade":95.5}]
+[
+  {
+    "ID": 1,
+    "Name": "Ali",
+    "Surname": "M\u0259mm\u0259dov",
+    "Age": 20,
+    "Grade": 85.5
+  },
+  {
+    "ID": 2,
+    "Name": "Leyla",
+    "Surname": "H\u0259s\u0259nova",
+    "Age": 19,
+    "Grade": 92
+  },
+  {
+    "ID": 3,
+    "Name": "V\u00FCqar",
+    "Surname": "\u018Fliyev",
+    "Age": 21,
+    "Grade": 78.5
+  },
+  {
+    "ID": 3,
+    "Name": "Nigar",
+    "Surname": "\u018Fhm\u0259dova",
+    "Age": 20,
+    "Grade": 88
+  },
+  {
+    "ID": 4,
+    "Name": "R\u0259\u015Fad",
+    "Surname": "Quliyev",
+    "Age": 22,
+    "Grade": 95.5
+  }
+]

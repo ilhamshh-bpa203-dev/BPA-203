@@ -17,7 +17,7 @@ namespace _17_Directory_StreamReader_StreamWritter_Serialization_deserialization
         public string TextFilePath { get; set; }
         public string JsonFilePath { get; set; }
 
-        public FileManager()
+        public FileManager() //
         {
             FolderPath = @"C:\Users\Ilham\Desktop\StudentData";
             TextFilePath = @"C:\Users\Ilham\Desktop\StudentData\Students.txt";

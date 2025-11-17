@@ -1,0 +1,42 @@
+.first {
+    display: flex;
+    align-items: center;
+    /* margin-right: 60px; */
+}
+
+.second {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+
+}
+
+
+
+
+
+.text1 {
+    color: cyan;
+    font-size: 35px;
+    margin-right: 64px;
+
+}
+
+.text2 {
+    margin-right: 64px;
+
+}
+
+.text3 {
+    color: cyan;
+    font-size: 35px;
+    margin-right: 64px;
+
+
+}
+
+.text4 {
+    font-family: cursive;
+    margin-right: 64px;
+
+}

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Ilham\\Desktop\\BPA-203\\17-Directory,StreamReader,StreamWritter,Serialization,deserialization\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|c:\\users\\ilham\\desktop\\bpa-203\\17-directory,streamreader,streamwritter,serialization,deserialization\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|c:\\users\\ilham\\desktop\\bpa-203\\17-directory,streamreader,streamwritter,serialization,deserialization\\json\\jsconfig1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|solutionrelative:json\\jsconfig1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|c:\\users\\ilham\\desktop\\bpa-203\\17-directory,streamreader,streamwritter,serialization,deserialization\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|c:\\users\\ilham\\desktop\\bpa-203\\17-directory,streamreader,streamwritter,serialization,deserialization\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|c:\\users\\ilham\\desktop\\bpa-203\\17-directory,streamreader,streamwritter,serialization,deserialization\\models\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|solutionrelative:models\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|c:\\users\\ilham\\desktop\\bpa-203\\17-directory,streamreader,streamwritter,serialization,deserialization\\json\\jsconfig1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|solutionrelative:json\\jsconfig1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|c:\\users\\ilham\\desktop\\bpa-203\\17-directory,streamreader,streamwritter,serialization,deserialization\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D58083-AE3D-4E3C-A5B2-43392380B18C}|17-Directory,StreamReader,StreamWritter,Serialization,deserialization.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "jsconfig1.json",
               "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\17-Directory,StreamReader,StreamWritter,Serialization,deserialization\\JSon\\jsconfig1.json",
               "RelativeDocumentMoniker": "JSon\\jsconfig1.json",
               "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\17-Directory,StreamReader,StreamWritter,Serialization,deserialization\\JSon\\jsconfig1.json",
               "RelativeToolTip": "JSon\\jsconfig1.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAB5AQAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-11-05T19:45:23.09Z",
               "EditorCaption": ""
@@ -49,14 +49,13 @@
               "RelativeDocumentMoniker": "Models\\FileManager.cs",
               "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\17-Directory,StreamReader,StreamWritter,Serialization,deserialization\\Models\\FileManager.cs",
               "RelativeToolTip": "Models\\FileManager.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAiwFoAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T18:32:22.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T18:32:22.969Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\17-Directory,StreamReader,StreamWritter,Serialization,deserialization\\Models\\Student.cs",
               "RelativeDocumentMoniker": "Models\\Student.cs",
@@ -64,18 +63,17 @@
               "RelativeToolTip": "Models\\Student.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAqwBQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T18:32:05.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T18:32:05.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\17-Directory,StreamReader,StreamWritter,Serialization,deserialization\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\17-Directory,StreamReader,StreamWritter,Serialization,deserialization\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwDsAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAQwJYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-05T18:31:09.464Z",
               "EditorCaption": ""

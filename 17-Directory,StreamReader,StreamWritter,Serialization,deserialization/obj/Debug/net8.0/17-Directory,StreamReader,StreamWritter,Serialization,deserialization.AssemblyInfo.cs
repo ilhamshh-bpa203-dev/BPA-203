@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("17-Directory,StreamReader,StreamWritter,Serialization,deserialization")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8854bdeb6c9f4d9b6886084835bd4510090956eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+942be53077a2fba4053d5a8d4cb7c82418b113ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("17-Directory,StreamReader,StreamWritter,Serialization,deserialization")]
 [assembly: System.Reflection.AssemblyTitleAttribute("17-Directory,StreamReader,StreamWritter,Serialization,deserialization")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
