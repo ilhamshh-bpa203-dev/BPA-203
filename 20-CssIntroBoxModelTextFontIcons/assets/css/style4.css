@@ -16,6 +16,11 @@ body {
 
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .the {
     font-family: 'Roboto Slab', serif;
     text-transform: uppercase;
@@ -23,11 +28,9 @@ body {
     color: #e18607;
     text-shadow: 2px 2px 4px rgba(0, 0, 2, 0.3);
     margin-left: 140px;
-    margin-top: 0;
 }
 
 .text1 {
-    margin-top: 0;
     font-family: 'Playwrite CZ', cursive;
     font-weight: 200;
     font-size: 70px;
@@ -42,7 +45,6 @@ body {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 48px;
-    margin-top: 0;
 
 }
 
@@ -52,15 +54,14 @@ body {
     font-size: 36px;
     color: #000000;
     font-weight: normal;
-    margin-top: 0;
 
 }
 
 .text4 {
+    margin-left: 20px;
     font-family: 'Dancing Script', cursive;
     font-size: 40px;
     color: #e18607;
     font-weight: 500;
-    margin-top: 0;
 
 }
