@@ -218,15 +218,17 @@
     flex-direction: column;
     align-items: center;
 
+
 }
 
 .inputs input {
     width: 300px;
-    padding: 15px 300px;
+    padding: 15px;
+    color: black;
 }
 
 .inputs label {
-    margin-right: 450px;
+    margin-right: 5px;
 }
 
 .inputs button {
@@ -237,7 +239,7 @@
     border-radius: 15px;
     border: #7cf4dc;
     font-size: 20px;
-    margin-right: 450px;
+    margin-right: 5px;
 }
 
 .inputs button:hover {
