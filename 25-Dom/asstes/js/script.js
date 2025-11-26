@@ -16,6 +16,7 @@ card.style.position = "relative"
 let image = document.createElement("div")
 image.style.display = "flex"
 image.style.position = "relative"
+
 let image_icon = document.createElement('i')
 image_icon.classList.add("fa-regular", "fa-heart")
 image_icon.style.position = "absolute"
