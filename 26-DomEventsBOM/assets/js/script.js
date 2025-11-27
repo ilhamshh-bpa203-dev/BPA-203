@@ -5,6 +5,11 @@
 let num1 = document.querySelector(".num1")
 let num2 = document.querySelector(".num2")
 
+num1.addEventListener("keydown", evt => ["e", "E", "+", "-"].includes(evt.key) ? (alert("invalid number"), evt.preventDefault()) : null);
+num2.addEventListener("keydown", evt => ["e", "E", "+", "-"].includes(evt.key) ? (alert("invalid number"), evt.preventDefault()) : null);
+
+
+
 let result = document.querySelector(".result")
 
 let minusBtn = document.querySelector(".minus")
@@ -18,6 +23,8 @@ devideBtn.addEventListener("click", Devide)
 multBtn.addEventListener("click", Multi)
 sumBtn.addEventListener("click", Sum)
 clearBtn.addEventListener("click", Clear)
+
+
 
 function CheckValue() {
     if (num1.value == "" || num2.value == "") {
@@ -53,4 +60,5 @@ function Devide() {
 
     num1.value = ""
     num2.value = ""
+    result.textContent = 0
 }
