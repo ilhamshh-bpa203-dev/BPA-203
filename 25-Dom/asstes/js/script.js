@@ -12,7 +12,7 @@ card.style.alignItems = "center"
 card.style.position = "relative"
 
 
-//
+
 let image = document.createElement("div")
 image.style.display = "flex"
 image.style.position = "relative"

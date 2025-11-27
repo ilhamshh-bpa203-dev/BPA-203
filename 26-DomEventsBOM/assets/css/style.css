@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cal_area {
+
+    background-color: rgba(127, 210, 183, 0.919);
+    border-radius: 25px;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input {
+    border-radius: 5px;
+    height: 35px;
+    margin: 10px;
+    border-color: transparent;
+
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.result {
+    margin-top: 10px;
+    border: 2px solid none;
+    background-color: aliceblue;
+    height: 35px;
+    width: 165px;
+    border-radius: 5px;
+
+}
+
+.buttons {
+    margin-top: 80px;
+
+}
+
+.minus {
+    background-color: red;
+    border-radius: 50%;
+    font-size: 50px;
+    padding: 5px 30px 10px 30px;
+    color: aliceblue;
+    border: none;
+
+}
+
+.devide {
+    background-color: blue;
+    border-radius: 50%;
+    font-size: 45px;
+    color: aliceblue;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    border: none;
+}
+
+.mult {
+    background-color: rgb(250, 209, 1);
+    border-radius: 50%;
+    font-size: 45px;
+    color: aliceblue;
+    padding: 10px 30px 10px 30px;
+
+    border: none;
+}
+
+.sum {
+    background-color: greenyellow;
+    border-radius: 45%;
+    font-size: 45px;
+    color: aliceblue;
+    padding: 10px 30px 10px 30px;
+    border: none;
+
+}
+
+.clear {
+    margin-top: 20px;
+    background-color: black;
+    color: aliceblue;
+    width: 350px;
+    height: 80px;
+    border-radius: 15px;
+}
