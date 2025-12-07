@@ -1,4 +1,4 @@
-﻿--create database CompanyMM
+﻿-create database CompanyMM
 USE CompanyMM
 
 
@@ -91,9 +91,54 @@ join Projects AS p
 ON p.ProjectID = ep.ProjectID
 
 
---7. View-dan istifadə edərək bir employee üçün (məsələn EmployeeID = 1) bütün project-ləri göstərin.
+-- 7. View-dan istifadə edərək bir employee üçün (məsələn EmployeeID = 1) bütün project-ləri göstərin.
 
 select * from EmployeeProjectView where EmployeeID = 1
 
 
+-- C. Procedures və Functions
+-- 8. Stored procedure yazın: sp_AssignEmployeeToProject(IN empId INT, IN projId INT) — əgər təyinat yoxdursa, EmployeeProjects-ə INSERT etsin; varsa heç nə etməsin.
+
+create PROCEDURE sp_AssignEmployeeToProject @empId INT,@projId INT
+AS
+BEGIN
+    IF NOT EXISTS (
+        SELECT *
+        FROM EmployeeProjects
+        WHERE EmployeeID = @empId AND ProjectID = @projId
+    )
+    
+        INSERT INTO EmployeeProjects (EmployeeID, ProjectID, AssignedDate)
+        VALUES (@empId, @projId, GETDATE());
+
+END;
+
+
+-- 9. Function yazın: fn_GetProjectCount(empId INT) RETURNS INT — verilən employee üçün project sayını döndürsün. Function-u çağırıb nəticəni göstərin (SELECT ilə)
+
+
+create function fn_GetProjectCount(@empId INT)
+returns int
+as
+begin
+declare @result int
+select @result = Count(ProjectID)  from EmployeeProjects
+Where EmployeeID = @empId
+
+return @result ;
+
+
+end
+
+select dbo.fn_GetProjectCount(1) as Projects;
+
+
+--E. Dəyişiklik və silmə
+--10. sp_AssignEmployeeToProject istifadə edərək yeni təyinat əlavə edin və nəticəni yoxlayın.
+exec sp_AssignEmployeeToProject 1,3
+
+select * from EmployeeProjects
+
+-- 11. Bir employee-nin bütün project-lərindən çıxarın (DELETE FROM EmployeeProjects WHERE EmployeeID = X) 
+DELETE FROM EmployeeProjects WHERE EmployeeID = 3
 
