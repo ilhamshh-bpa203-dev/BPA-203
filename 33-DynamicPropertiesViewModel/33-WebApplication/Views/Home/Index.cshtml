@@ -1,0 +1,28 @@
+﻿@using _33_WebApplication.Models
+@using _33_WebApplication.ViewModels
+@model HomeVM
+<h1>Home Page</h1>
+
+@* <ul style="list-style: none">
+    @foreach (Students student in ViewBag.Students)
+    {
+        <li >@student.Id @student.Name @student.Age</li>
+    }
+</ul> *@
+
+@* <ul style="list-style: none">
+    @foreach (Students student in ViewData["Students"] as List<Students>)
+    {
+        <li>@student.Id @student.Name @student.Age</li>
+    }
+</ul> *@
+
+@* @TempData["Name"] *@
+
+
+<ul style="list-style: none">
+    @foreach (Students student in Model.Students)
+    {
+        <li>@student.Id @student.Name @student.Age</li>
+    }
+</ul>
