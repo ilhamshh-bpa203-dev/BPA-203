@@ -8,5 +8,7 @@ namespace _34_Front_To_BackSqlConnection.DAL
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options) { }
 
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Shipping> Shippings { get; set; }
+        public DbSet<Client> Clients { get; set; }
     }
 }

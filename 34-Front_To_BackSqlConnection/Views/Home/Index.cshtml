@@ -59,48 +59,24 @@
         <div class="container">
           <div class="shipping-bg">
             <div class="row shipping-wrap">
-              <div class="col-lg-4 col-md-6">
-                <div class="shipping-item">
-                  <div class="shipping-img">
-                    <img
-                      src="~/assets/images/website-images//car.png"
-                      alt="Shipping Icon"
-                    />
-                  </div>
-                  <div class="shipping-content">
-                    <h2 class="title">Free Shipping</h2>
-                    <p class="short-desc mb-0">Capped at $319 per order</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-                <div class="shipping-item">
-                  <div class="shipping-img">
-                    <img
-                      src="~/assets/images/website-images//card.png"
-                      alt="Shipping Icon"
-                    />
-                  </div>
-                  <div class="shipping-content">
-                    <h2 class="title">Safe Payment</h2>
-                    <p class="short-desc mb-0">With our payment gateway</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-                <div class="shipping-item">
-                  <div class="shipping-img">
-                    <img
-                      src="~/assets/images/website-images//service.png"
-                      alt="Shipping Icon"
-                    />
-                  </div>
-                  <div class="shipping-content">
-                    <h2 class="title">Best Services</h2>
-                    <p class="short-desc mb-0">Friendly & Supper Services</p>
-                  </div>
-                </div>
-              </div>
+
+                @foreach(Shipping shipping in Model.Shippings)
+                {
+                    <div class="col-lg-4 col-md-6">
+                        <div class="shipping-item">
+                            <div class="shipping-img">
+                                <img src="~/assets/images/website-images//@shipping.ImageURL"
+                                     alt="Shipping Icon" />
+                            </div>
+                            <div class="shipping-content">
+                                <h2 class="title">@shipping.Title</h2>
+                                <p class="short-desc mb-0">@shipping.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
             </div>
           </div>
         </div>
@@ -2622,66 +2598,27 @@
           <div class="container custom-space">
             <div class="swiper-container testimonial-slider with-bg">
               <div class="swiper-wrapper">
-                <div class="swiper-slide testimonial-item">
-                  <div class="user-info mb-3">
-                    <div class="user-shape-wrap">
-                      <div class="user-img">
-                        <img
-                          src="~/assets/images/website-images//1--1rnu4p.png"
-                          alt="User Image"
-                        />
-                      </div>
-                    </div>
-                    <div class="user-content text-charcoal">
-                      <h4 class="user-name mb-1">Phoenix Baker</h4>
-                      <span class="user-occupation">Client</span>
-                    </div>
-                  </div>
-                  <p class="user-comment mb-6">
-                    Lorem ipsum dolor sit amet, conse adipisic elit, sed do
-                    eiusmod tempo incididunt ut labore et dolore. magna
-                  </p>
-                </div>
-                <div class="swiper-slide testimonial-item">
-                  <div class="user-info mb-3">
-                    <div class="user-shape-wrap">
-                      <div class="user-img">
-                        <img
-                          src="~/assets/images/website-images//2.png"
-                          alt="User Image"
-                        />
-                      </div>
-                    </div>
-                    <div class="user-content text-charcoal">
-                      <h4 class="user-name mb-1">Phoenix Baker</h4>
-                      <span class="user-occupation">Client</span>
-                    </div>
-                  </div>
-                  <p class="user-comment mb-6">
-                    Lorem ipsum dolor sit amet, conse adipisic elit, sed do
-                    eiusmod tempo incididunt ut labore et dolore. magna
-                  </p>
-                </div>
-                <div class="swiper-slide testimonial-item">
-                  <div class="user-info mb-3">
-                    <div class="user-shape-wrap">
-                      <div class="user-img">
-                        <img
-                          src="~/assets/images/website-images//3.png"
-                          alt="User Image"
-                        />
-                      </div>
-                    </div>
-                    <div class="user-content text-charcoal">
-                      <h4 class="user-name mb-1">Phoenix Baker</h4>
-                      <span class="user-occupation">Client</span>
-                    </div>
-                  </div>
-                  <p class="user-comment mb-6">
-                    Lorem ipsum dolor sit amet, conse adipisic elit, sed do
-                    eiusmod tempo incididunt ut labore et dolore. magna
-                  </p>
-                </div>
+                    @foreach (Client client in Model.Clients)
+                    {
+                        <div class="swiper-slide testimonial-item">
+                            <div class="user-info mb-3">
+                                <div class="user-shape-wrap">
+                                    <div class="user-img">
+                                        <img src="~/assets/images/website-images/@client.ImageURL"
+                                             alt="User Image" />
+                                    </div>
+                                </div>
+                                <div class="user-content text-charcoal">
+                                    <h4 class="user-name mb-1">@client.Name</h4>
+                                    <span class="user-occupation">@client.Title</span>
+                                </div>
+                            </div>
+                            <p class="user-comment mb-6">
+                                @client.Comment
+                            </p>
+                        </div>
+                    }
+
               </div>
               <!-- Add Pagination -->
               <div class="swiper-pagination without-absolute"></div>

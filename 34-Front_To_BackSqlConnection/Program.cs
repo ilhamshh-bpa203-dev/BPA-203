@@ -4,18 +4,11 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddDbContext<AppDBContext>
-    (opt =>
+builder.Services.AddDbContext<AppDBContext>(opt =>
     opt.UseSqlServer(
-        "server= hsynoffs-Victus\\SQLEXPRESS01;" +
-        "database=ProniaBPA203DB;" +
-        "trusted_connection=true;" +
-        "trustServerCertificate=true"
-
-
+        "server=PC;database=ProniaBPA203DB; trusted_connection=true; trustServerCertificate=true"
     )
-    );
+);
 
 var app = builder.Build();
 
