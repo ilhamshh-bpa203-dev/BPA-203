@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\novbe2\\Desktop\\34-Front_To_BackSqlConnection\\34-Front_To_BackSqlConnection.csproj": {}
+    "C:\\Users\\Ilham\\Desktop\\BPA-203\\34-Front_To_BackSqlConnection\\34-Front_To_BackSqlConnection.csproj": {}
   },
   "projects": {
-    "C:\\Users\\novbe2\\Desktop\\34-Front_To_BackSqlConnection\\34-Front_To_BackSqlConnection.csproj": {
+    "C:\\Users\\Ilham\\Desktop\\BPA-203\\34-Front_To_BackSqlConnection\\34-Front_To_BackSqlConnection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\novbe2\\Desktop\\34-Front_To_BackSqlConnection\\34-Front_To_BackSqlConnection.csproj",
+        "projectUniqueName": "C:\\Users\\Ilham\\Desktop\\BPA-203\\34-Front_To_BackSqlConnection\\34-Front_To_BackSqlConnection.csproj",
         "projectName": "34-Front_To_BackSqlConnection",
-        "projectPath": "C:\\Users\\novbe2\\Desktop\\34-Front_To_BackSqlConnection\\34-Front_To_BackSqlConnection.csproj",
-        "packagesPath": "C:\\Users\\novbe2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\novbe2\\Desktop\\34-Front_To_BackSqlConnection\\obj\\",
+        "projectPath": "C:\\Users\\Ilham\\Desktop\\BPA-203\\34-Front_To_BackSqlConnection\\34-Front_To_BackSqlConnection.csproj",
+        "packagesPath": "C:\\Users\\Ilham\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ilham\\Desktop\\BPA-203\\34-Front_To_BackSqlConnection\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\novbe2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ilham\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
