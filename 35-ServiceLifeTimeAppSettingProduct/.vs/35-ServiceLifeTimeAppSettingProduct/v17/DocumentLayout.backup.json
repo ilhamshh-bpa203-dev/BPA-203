@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Ilham\\Desktop\\BPA-203\\35-ServiceLifeTimeAppSettingProduct\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E1BBBE6-236D-4965-88FA-7DA957D2EDB1}|35-ServiceLifeTimeAppSettingProduct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\35-servicelifetimeappsettingproduct\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1BBBE6-236D-4965-88FA-7DA957D2EDB1}|35-ServiceLifeTimeAppSettingProduct.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E1BBBE6-236D-4965-88FA-7DA957D2EDB1}|35-ServiceLifeTimeAppSettingProduct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\35-servicelifetimeappsettingproduct\\views\\shop\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E1BBBE6-236D-4965-88FA-7DA957D2EDB1}|35-ServiceLifeTimeAppSettingProduct.csproj|solutionrelative:views\\shop\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E1BBBE6-236D-4965-88FA-7DA957D2EDB1}|35-ServiceLifeTimeAppSettingProduct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\35-servicelifetimeappsettingproduct\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6E1BBBE6-236D-4965-88FA-7DA957D2EDB1}|35-ServiceLifeTimeAppSettingProduct.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E1BBBE6-236D-4965-88FA-7DA957D2EDB1}|35-ServiceLifeTimeAppSettingProduct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\35-servicelifetimeappsettingproduct\\viewmodels\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E1BBBE6-236D-4965-88FA-7DA957D2EDB1}|35-ServiceLifeTimeAppSettingProduct.csproj|solutionrelative:viewmodels\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E1BBBE6-236D-4965-88FA-7DA957D2EDB1}|35-ServiceLifeTimeAppSettingProduct.csproj|c:\\users\\ilham\\desktop\\bpa-203\\35-servicelifetimeappsettingproduct\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E1BBBE6-236D-4965-88FA-7DA957D2EDB1}|35-ServiceLifeTimeAppSettingProduct.csproj|solutionrelative:controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,34 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\35-ServiceLifeTimeAppSettingProduct\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\35-ServiceLifeTimeAppSettingProduct\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAKgIAAAAAAAAAAAwwMMIAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-14T11:40:42.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeVM.cs",
-              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\35-ServiceLifeTimeAppSettingProduct\\ViewModels\\HomeVM.cs",
-              "RelativeDocumentMoniker": "ViewModels\\HomeVM.cs",
-              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\35-ServiceLifeTimeAppSettingProduct\\ViewModels\\HomeVM.cs",
-              "RelativeToolTip": "ViewModels\\HomeVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T11:36:04.193Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
@@ -57,14 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\35-ServiceLifeTimeAppSettingProduct\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\35-ServiceLifeTimeAppSettingProduct\\Controllers\\HomeController.cs*",
-              "RelativeToolTip": "Controllers\\HomeController.cs*",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAB4AAAAkAAAAAAAAAA==",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\35-ServiceLifeTimeAppSettingProduct\\Views\\Shop\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shop\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\35-ServiceLifeTimeAppSettingProduct\\Views\\Shop\\Details.cshtml",
+              "RelativeToolTip": "Views\\Shop\\Details.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T18:24:00.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShopController.cs",
+              "DocumentMoniker": "C:\\Users\\Ilham\\Desktop\\BPA-203\\35-ServiceLifeTimeAppSettingProduct\\Controllers\\ShopController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ShopController.cs",
+              "ToolTip": "C:\\Users\\Ilham\\Desktop\\BPA-203\\35-ServiceLifeTimeAppSettingProduct\\Controllers\\ShopController.cs",
+              "RelativeToolTip": "Controllers\\ShopController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAwCkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T10:42:24.414Z",
+              "WhenOpened": "2025-12-15T18:17:14.585Z",
               "EditorCaption": ""
             }
           ]

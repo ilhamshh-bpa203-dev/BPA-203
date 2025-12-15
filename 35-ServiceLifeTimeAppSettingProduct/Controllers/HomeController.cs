@@ -21,7 +21,10 @@ namespace _34_Front_To_BackSqlConnection.Controllers
             List<Slider> sliders = _context.Sliders.ToList();
             List<Shipping> shippings = _context.Shippings.ToList();
             List<Client> clients = _context.Clients.ToList();
-            List<Product> products = _context.Products.Include(p => p.ProductImages).ToList();
+            List<Product> products = _context.Products
+                .Include(p => p.ProductImages.Where(pi=>pi.IsPrimary != null))
+                .ToList();
+
 
             HomeVM homeVM = new HomeVM
             {
