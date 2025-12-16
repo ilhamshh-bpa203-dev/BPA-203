@@ -1,10 +1,14 @@
 ﻿using _34_Front_To_BackSqlConnection.Models;
+using Newtonsoft.Json.Serialization;
+using System.ComponentModel.DataAnnotations;
 
 namespace _35_ServiceLifeTimeAppSettingProduct.Models
 {
     public class Category:BaseEntity
     {
+        [Required (ErrorMessage ="Bos olmaz")]
+        [MaxLength(25, ErrorMessage="Agilli ol") ]
         public  string Name{ get; set; }
-        public List<Product> Products { get; set; }
+        public List<Product>? Products { get; set; }
     }
 }
