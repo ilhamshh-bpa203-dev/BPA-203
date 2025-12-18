@@ -1,4 +1,5 @@
-﻿@model List<Category>
+﻿@using _34_Front_To_BackSqlConnection.Models
+@model List<Slider>
 
 @{
     int count = 0;
@@ -8,7 +9,7 @@
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Create Category</h4>
+                <h4 class="card-title">Slider</h4>
                 <p class="card-description">
                     <a asp-action="Create" class="btn btn-success">Create</a>
                 </p>
@@ -20,10 +21,13 @@
                                     №
                                 </th>
                                 <th>
-                                    Name
+                                    Image
                                 </th>
                                 <th>
-                                    Count
+                                    Title
+                                </th>
+                                <th>
+                                    Order
                                 </th>
                                 <th>
                                     Settings
@@ -31,26 +35,28 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (Category category in Model)
+                            @foreach (var slider in Model)
                             {
-                               count++;
+                                count++;
 
                                 <tr>
                                     <td>
                                         @count
                                     </td>
                                     <td>
-                                        @category.Name
+                                        <img style="width:70px;height: 70px " src="~/assets/images/website-images/@slider.ImageURL" alt="Alternate Text" />
+                                    </td>
+                                    
+                                    <td>
+                                        <p>@slider.Title</p>
                                     </td>
                                     <td>
-                                        @category.Products.Count
+                                        <p>@slider.Order</p>
                                     </td>
                                     <td>
-                                        <a class="btn btn-warning" asp-action="Update" asp-route-id="@category.Id"><i class="mdi mdi-pencil-box"></i></a>
-                                        <a class="btn btn-danger" asp-action="delete" asp-route-id="@category.Id"><i class="mdi mdi-delete-forever"></i></a>
-                                        <a class="btn btn-primary" asp-action="Details" asp-route-id="@category.Id"><i class="mdi mdi-information"></i>  </a>
-                                           
-                                      
+                                        <a class="btn btn-warning" asp-action="Update" asp-route-id="@slider.Id"><i class="mdi mdi-pencil-box"></i></a>
+                                        <a class="btn btn-danger" asp-action="delete" asp-route-id="@slider.Id"><i class="mdi mdi-delete-forever"></i></a>
+                                        <a class="btn btn-primary" asp-action="details" asp-route-id="@slider.Id"><i class="mdi mdi-information" "></i></a>
                                     </td>
                                 </tr>
                             }

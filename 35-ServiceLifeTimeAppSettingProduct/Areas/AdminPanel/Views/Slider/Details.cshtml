@@ -1,0 +1,83 @@
+﻿@using _34_Front_To_BackSqlConnection.Models
+@model Slider
+
+@{
+    int count = 0;
+}
+
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Slider</h4>
+                <p class="card-description">
+                    <a asp-action="Create" class="btn btn-success">Create</a>
+                </p>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    №
+                                </th>
+                                <th>
+                                    Image
+                                </th>
+                                <th>
+                                    Title
+                                </th>
+                                <th>
+                                    Subtitle
+                                </th>
+                                <th>
+                                    Description
+                                </th>
+                                <th>
+                                    Order
+                                </th>
+                                <th>
+                                    Settings
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            @{
+                                count++;
+                            }
+
+                            <tr>
+                                <td>
+                                    @count
+                                </td>
+                                <td>
+                                    <img style="width:70px;height: 70px " src="~/assets/images/website-images/@Model.ImageURL" alt="Alternate Text" />
+                                </td>
+
+                                <td>
+                                    <p>@Model.Title</p>
+                                </td>
+                                <td>
+                                    <p>@Model.SubTitle</p>
+                                </td>
+                                <td>
+                                    <p>@Model.Description</p>
+                                </td>
+                                <td>
+                                    <p>@Model.Order</p>
+                                </td>
+                                <td>
+                                    <a class="btn btn-warning" asp-action="Update" asp-route-id="@Model.Id"><i class="mdi mdi-pencil-box"></i></a>
+                                    <a class="btn btn-danger" asp-action="delete" asp-route-id="@Model.Id"><i class="mdi mdi-delete-forever"></i></a>
+                                    @* <a class="btn btn-primary" asp-action="Details" asp-route-id="@Model.Id"><i class="mdi mdi-information"></i></a> *@
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
