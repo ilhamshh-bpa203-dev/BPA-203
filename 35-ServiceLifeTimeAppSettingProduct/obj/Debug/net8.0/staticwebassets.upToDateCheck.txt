@@ -290,3 +290,4 @@ wwwroot\admin\vendors\mdi\fonts\materialdesignicons-webfont.eot
 wwwroot\admin\vendors\mdi\fonts\materialdesignicons-webfont.ttf
 wwwroot\admin\vendors\mdi\fonts\materialdesignicons-webfont.woff
 wwwroot\admin\vendors\mdi\fonts\materialdesignicons-webfont.woff2
+wwwroot\assets\images\website-images\a64751a9-aa4f-482f-a927-f637659ccfdedownload (1).jpg

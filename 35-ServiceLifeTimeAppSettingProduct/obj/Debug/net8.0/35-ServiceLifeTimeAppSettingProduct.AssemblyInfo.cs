@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("35-ServiceLifeTimeAppSettingProduct")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+246c04828843be9655c1196d66ca3e2ad37bd10c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+656c1d83bfd22f5b46dd18720bbf6158f0aff27d")]
 [assembly: System.Reflection.AssemblyProductAttribute("35-ServiceLifeTimeAppSettingProduct")]
 [assembly: System.Reflection.AssemblyTitleAttribute("35-ServiceLifeTimeAppSettingProduct")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

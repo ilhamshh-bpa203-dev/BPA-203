@@ -1,5 +1,5 @@
 ﻿@using _34_Front_To_BackSqlConnection.Models
-@model SliderCreateVM 
+@model SliderUpdateVM
 
 
 <div class="row">
@@ -9,6 +9,10 @@
                 <h4 class="card-title">Create Slider</h4>
 
                 <form class="forms-sampless" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <img src="~/assets/images/website-images/@Model.ImageURL" alt="Alternate Text" />
+                        <input asp-for="ImageURL" class="form-control" placeholder="Image" type="hidden" >
+                    </div>
                     <div class="form-group">
                         <label for="Photo">Image</label>
                         <input asp-for="Photo" class="form-control" placeholder="Image" accept="image/*">
