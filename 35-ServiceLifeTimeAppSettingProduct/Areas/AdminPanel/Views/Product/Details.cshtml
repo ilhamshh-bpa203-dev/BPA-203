@@ -1,5 +1,5 @@
 ﻿@using _34_Front_To_BackSqlConnection.Models
-@model List<GetProductVM>
+@model GetProductVM
 
 @{
     int count = 0;
@@ -38,31 +38,36 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (GetProductVM getProductVM in Model)
-                            {
+
+
+                            @{
                                 count++;
-
-                                <tr>
-                                    <td>
-                                        @count
-                                    </td>
-                                    <td>
-                                        <img style="width:70px;height: 70px " src="~/assets/images/website-images/@getProductVM.ImageURL" alt="Alternate Text" />
-                                    </td>
-
-                                    <td>
-                                        <p>@getProductVM.Name</p>
-                                    </td>
-                                    <td>
-                                        <p>@getProductVM.CategoryName</p>
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-warning" asp-action="Update" asp-route-id="@getProductVM.Id"><i class="mdi mdi-pencil-box"></i></a>
-                                        <a class="btn btn-danger" asp-action="delete" asp-route-id="@getProductVM.Id"><i class="mdi mdi-delete-forever"></i></a>
-                                        <a class="btn btn-primary" asp-action="details" asp-route-id="@getProductVM.Id"><i class="mdi mdi-information" "></i></a>
-                                    </td>
-                                </tr>
                             }
+
+                            <tr>
+                                <td>
+                                    @count
+                                </td>
+                                <td>
+                                    <img style="width:70px;height: 70px " src="~/assets/images/website-images/@Model.ImageURL" alt="Alternate Text" />
+                                </td>
+
+                                <td>
+                                    <p>@Model.Name</p>
+                                </td>
+                                <td>
+                                    <p>@Model.CategoryName</p>
+                                </td>
+                                <td>
+                                    <p>@Model.Price</p>
+                                </td>
+                                <td>
+                                    <a class="btn btn-warning" asp-action="Update" asp-route-id="@Model.Id"><i class="mdi mdi-pencil-box"></i></a>
+                                    <a class="btn btn-danger" asp-action="delete" asp-route-id="@Model.Id"><i class="mdi mdi-delete-forever"></i></a>
+                                    @* <a class="btn btn-primary" asp-action="Details" asp-route-id="@Model.Id"><i class="mdi mdi-information"></i></a> *@
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>
