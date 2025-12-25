@@ -4,6 +4,7 @@ using _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.ViewModels;
 using _35_ServiceLifeTimeAppSettingProduct.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
@@ -68,10 +69,14 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
         public async Task<IActionResult> Create()
         {
             List<Category> categories = await _context.Categories.ToListAsync();
+            List<Tag> tags = await _context.Tags.ToListAsync();
+
+
 
             CreateProductVM createProductVM = new()
             {
                 Categories = categories,
+                Tags = tags
             };
 
             return View(createProductVM);
@@ -80,6 +85,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
         public async Task<IActionResult> Create(CreateProductVM createProductVM)
         {
             createProductVM.Categories = await _context.Categories.ToListAsync();
+            createProductVM.Tags = await _context.Tags.ToListAsync();
 
             if (createProductVM.Price < 0)
             {
@@ -102,6 +108,18 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 }
 
 
+
+            if (createProductVM.TagIds is not null)
+            {
+                bool existsTag = createProductVM.TagIds.Any(tId => createProductVM.Tags.Exists(t => t.Id == tId));
+                if (!existsProduct)
+                {
+                    ModelState.AddModelError(nameof(CreateProductVM.TagIds), "Tag not exists");
+                    return View(createProductVM);
+                }
+            }
+
+
             Product product = new()
             {
                 Name = createProductVM.Name,
@@ -110,6 +128,16 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 Description = createProductVM.Description,
                 CategoryId = createProductVM.CategoryId.Value,
             };
+
+
+            if (createProductVM.TagIds is not null)
+            {
+             product.ProductTags = createProductVM.TagIds.Select(tId=>new ProductTag
+             {
+                 TagId = tId,
+             }).ToList();   
+            }
+
 
             await _context.Products.AddAsync(product);  
             await _context.SaveChangesAsync();
@@ -125,6 +153,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 
 
             Product product = await _context.Products
+                .Include(p=>p.ProductTags)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (product is null) return NotFound();
@@ -137,6 +166,8 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 Description = product.Description,
                 CategoryId = product.CategoryId,
                 Categories = await _context.Categories.ToListAsync(),
+                Tags = await _context.Tags.ToListAsync(),
+                TagIds = product.ProductTags.Select(pt=>pt.TagId).ToList(),
             };
 
             return View(updateProductVM);
@@ -147,6 +178,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             if (id is null || id < 1) return BadRequest();
 
             updateProductVM.Categories = await _context.Categories.ToListAsync();
+
 
             if (!ModelState.IsValid)
             {

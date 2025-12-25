@@ -149,7 +149,7 @@
                     <div class="col-xl-3 col-md-4 col-sm-6">
                         <div class="product-item">
                                         <div class="product-img">
-                                            <a href="shop.html">
+                                            <a asp-controller="shop" asp-action="details" asp-route-id="@product.Id">
                                                 <img class="primary-img"
                                                      src="~/assets/images/website-images//@product.ProductImages.FirstOrDefault(p=>p.IsPrimary==true)?.ImageURL"
                                                      alt="Product Images" />

@@ -11,5 +11,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Models
         public Category Category{ get; set; }
         public int CategoryId { get; set; }
         public List<ProductImage> ProductImages { get; set; }
+        public List<ProductTag> ProductTags { get; set; }
+
     }
 }

@@ -74,7 +74,7 @@
                 </div>
                 <div class="col-lg-6 pt-5 pt-lg-0">
                     <div class="single-product-content">
-                        <h2 class="title">@Model.Product.
+                        <h2 class="title">@Model.Product.Name
                         </h2>
                         <div class="price-box">
                             <span class="new-price">$@Model.Product.Price</span>
@@ -194,9 +194,12 @@
                         <div class="product-category product-tags">
                             <span class="title">Tags :</span>
                             <ul>
-                                <li>
-                                    <a href="#">Furniture</a>
-                                </li>
+                                @foreach (var productTag in Model.Product.ProductTags)
+                                {
+                                    <li>
+                                        <a href="#">@productTag.Tag.Name</a>
+                                    </li>
+                                }
                             </ul>
                         </div>
                         <div class="product-category social-link align-items-center pb-0">
@@ -468,10 +471,10 @@
                                     <div class="product-img">
                                         <a href="single-product-variable.html">
                                             <img class="primary-img"
-                                                 src="~/assets/images/website-images/@relatedProduct.ProductImages.FirstOrDefault(rp=>rp.IsPrimary == true).ImageURL"
+                                                 src="~/assets/images/website-images/@relatedProduct.ProductImages.FirstOrDefault(rp=>rp.IsPrimary == true)?.ImageURL"
                                                  alt="Product Images" />
                                             <img class="secondary-img"
-                                                 src="~/assets/images/website-images/@relatedProduct.ProductImages.FirstOrDefault(rp => rp.IsPrimary == false).ImageURL"
+                                                 src="~/assets/images/website-images/@relatedProduct.ProductImages.FirstOrDefault(rp => rp.IsPrimary == false)?.ImageURL"
                                                  alt="Product Images" />
                                         </a>
                                         <div class="product-add-action">
