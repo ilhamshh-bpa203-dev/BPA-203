@@ -5,6 +5,9 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.ViewModels
 {
     public class CreateProductVM
     {
+        public IFormFile MainPhoto { get; set; }
+        public IFormFile? HoverPhoto { get; set; }
+        public List<IFormFile>? AdditionalPhoto { get; set; }
         public string Name { get; set; }
         [Required]
         public decimal? Price { get; set; }

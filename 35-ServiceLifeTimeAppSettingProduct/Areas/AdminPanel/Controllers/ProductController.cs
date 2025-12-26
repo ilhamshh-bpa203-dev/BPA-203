@@ -2,6 +2,8 @@
 using _34_Front_To_BackSqlConnection.Models;
 using _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.ViewModels;
 using _35_ServiceLifeTimeAppSettingProduct.Models;
+using _35_ServiceLifeTimeAppSettingProduct.Utilities.Enums;
+using _35_ServiceLifeTimeAppSettingProduct.Utilities.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
@@ -99,25 +101,66 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             }
 
 
-           
-                bool existsProduct = createProductVM.Categories.Any(c => c.Id == createProductVM.CategoryId);
-                if (!existsProduct)
-                {
+            if (createProductVM.MainPhoto.CheckFileType("image/"))
+            {
+                ModelState.AddModelError(nameof(createProductVM.MainPhoto), "Image type incorrect");
+                return View(createProductVM);
+            }
+            if (createProductVM.MainPhoto.CheckFieSize(FileSize.MB,1))
+            {
+                ModelState.AddModelError(nameof(createProductVM.MainPhoto), "Image size must be less then 1 mb");
+                return View(createProductVM);
+            }
+
+            if (createProductVM.HoverPhoto.CheckFileType("image/"))
+            {
+                ModelState.AddModelError(nameof(createProductVM.HoverPhoto), "Image type incorrect");
+                return View(createProductVM);
+            }
+            if (createProductVM.HoverPhoto.CheckFieSize(FileSize.MB, 1))
+            {
+                ModelState.AddModelError(nameof(createProductVM.HoverPhoto), "Image size must be less then 1 mb");
+                return View(createProductVM);
+            }
+
+
+
+
+
+            bool existsProduct = createProductVM.Categories.Any(c => c.Id == createProductVM.CategoryId);
+            if (!existsProduct)
+            {
                 ModelState.AddModelError(nameof(CreateProductVM.CategoryId), "Category not exists");
-                    return View(createProductVM);
-                }
+                return View(createProductVM);
+            }
 
 
 
             if (createProductVM.TagIds is not null)
             {
-                bool existsTag = createProductVM.TagIds.Any(tId => createProductVM.Tags.Exists(t => t.Id == tId));
-                if (!existsProduct)
+                bool existsTag = createProductVM.TagIds.Any(tId => !createProductVM.Tags.Exists(t => t.Id == tId));
+                if (existsTag)
                 {
                     ModelState.AddModelError(nameof(CreateProductVM.TagIds), "Tag not exists");
                     return View(createProductVM);
                 }
             }
+
+            ProductImage mainImage = new ProductImage()
+            {
+                ImageURL = await createProductVM.MainPhoto.CreateFileAsync(_env.WebRootPath,"assets","images","website-images"),
+                IsPrimary = true,
+           
+            };
+            ProductImage hoverImage = new ProductImage()
+            {
+                ImageURL = await createProductVM.HoverPhoto.CreateFileAsync(_env.WebRootPath,"assets","images","website-images"),
+                IsPrimary = false,
+           
+            };
+
+
+
 
 
             Product product = new()
@@ -127,19 +170,20 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 SKU = createProductVM.SKU,
                 Description = createProductVM.Description,
                 CategoryId = createProductVM.CategoryId.Value,
+                ProductImages = new List<ProductImage>() { mainImage, hoverImage }
             };
 
 
             if (createProductVM.TagIds is not null)
             {
-             product.ProductTags = createProductVM.TagIds.Select(tId=>new ProductTag
-             {
-                 TagId = tId,
-             }).ToList();   
+                product.ProductTags = createProductVM.TagIds.Select(tId => new ProductTag
+                {
+                    TagId = tId,
+                }).ToList();
             }
 
 
-            await _context.Products.AddAsync(product);  
+            await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
 
 
@@ -153,7 +197,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 
 
             Product product = await _context.Products
-                .Include(p=>p.ProductTags)
+                .Include(p => p.ProductTags)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (product is null) return NotFound();
@@ -167,36 +211,73 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 CategoryId = product.CategoryId,
                 Categories = await _context.Categories.ToListAsync(),
                 Tags = await _context.Tags.ToListAsync(),
-                TagIds = product.ProductTags.Select(pt=>pt.TagId).ToList(),
+                TagIds = product.ProductTags.Select(pt => pt.TagId).ToList(),
             };
 
             return View(updateProductVM);
         }
         [HttpPost]
-        public async Task<IActionResult> Update(int? id,UpdateProductVM updateProductVM)
+        public async Task<IActionResult> Update(int? id, UpdateProductVM updateProductVM)
         {
             if (id is null || id < 1) return BadRequest();
 
             updateProductVM.Categories = await _context.Categories.ToListAsync();
-
+            updateProductVM.Tags = await _context.Tags.ToListAsync();
 
             if (!ModelState.IsValid)
             {
                 return View(updateProductVM);
             }
 
-            Product existsProduct = await _context.Products.FirstOrDefaultAsync(c => c.Id == id);
-            if(existsProduct is null) return NotFound();
+            if (updateProductVM.TagIds is not null)
+            {
+                bool existsTag = updateProductVM.TagIds.Any(tId => !updateProductVM.Tags.Exists(t => t.Id == tId));
+                if (existsTag)
+                {
+                    ModelState.AddModelError(nameof(CreateProductVM.TagIds), "Tag not exists");
+                    return View(updateProductVM);
+                }
+            }
+
+            Product existsProduct = await _context.Products.Include(p => p.ProductTags).FirstOrDefaultAsync(c => c.Id == id);
+            if (existsProduct is null) return NotFound();
 
             if (updateProductVM.CategoryId != existsProduct.CategoryId)
             {
-                bool isExistsCategory = updateProductVM.Categories.Any(c=>c.Id == updateProductVM.CategoryId);
+                bool isExistsCategory = updateProductVM.Categories.Any(c => c.Id == updateProductVM.CategoryId);
                 if (!isExistsCategory)
                 {
                     ModelState.AddModelError(nameof(UpdateProductVM.CategoryId), "Category not exists");
                     return View(updateProductVM);
                 }
             }
+
+            if (updateProductVM.TagIds is null)
+            {
+                updateProductVM.TagIds = new();
+            }
+            else
+            {
+                updateProductVM.TagIds = updateProductVM.TagIds.Distinct().ToList();
+            }
+
+
+
+
+            if (updateProductVM.TagIds is not null)
+            {
+                _context.ProductTags.RemoveRange(existsProduct.ProductTags
+                    .Where(pTag => !updateProductVM.TagIds
+                    .Exists(tId => tId == pTag.TagId))
+                    .ToList());
+
+                _context.ProductTags.AddRange(updateProductVM.TagIds
+                    .Where(tId => !existsProduct.ProductTags
+                    .Exists(pTag => pTag.TagId == tId))
+                    .ToList()
+                    .Select(tId => new ProductTag { TagId = tId, ProductId = existsProduct.Id }));
+            }
+
 
             existsProduct.Name = updateProductVM.Name;
             existsProduct.SKU = updateProductVM.SKU;
