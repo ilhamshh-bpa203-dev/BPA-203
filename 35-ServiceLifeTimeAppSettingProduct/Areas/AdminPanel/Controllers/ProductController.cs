@@ -106,7 +106,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 ModelState.AddModelError(nameof(createProductVM.MainPhoto), "Image type incorrect");
                 return View(createProductVM);
             }
-            if (createProductVM.MainPhoto.CheckFieSize(FileSize.MB,1))
+            if (createProductVM.MainPhoto.CheckFieSize(FileSize.MB, 1))
             {
                 ModelState.AddModelError(nameof(createProductVM.MainPhoto), "Image size must be less then 1 mb");
                 return View(createProductVM);
@@ -148,15 +148,15 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 
             ProductImage mainImage = new ProductImage()
             {
-                ImageURL = await createProductVM.MainPhoto.CreateFileAsync(_env.WebRootPath,"assets","images","website-images"),
+                ImageURL = await createProductVM.MainPhoto.CreateFileAsync(_env.WebRootPath, "assets", "images", "website-images"),
                 IsPrimary = true,
-           
+
             };
             ProductImage hoverImage = new ProductImage()
             {
-                ImageURL = await createProductVM.HoverPhoto.CreateFileAsync(_env.WebRootPath,"assets","images","website-images"),
+                ImageURL = await createProductVM.HoverPhoto.CreateFileAsync(_env.WebRootPath, "assets", "images", "website-images"),
                 IsPrimary = false,
-           
+
             };
 
 
@@ -182,6 +182,38 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 }).ToList();
             }
 
+            if (createProductVM.AdditionalPhoto is not null)
+            {
+                string text = string.Empty;
+                foreach (IFormFile file in createProductVM.AdditionalPhoto)
+                {
+
+                    if (file.CheckFileType("image/"))
+                    {
+                        text += $"   <p class=\"text-danger\">{file.FileName}</p>  type is incorrect";
+                        continue;
+                    }
+                    if (file.CheckFieSize(FileSize.MB, 1))
+                    {
+                        text += $"   <p class=\"text-danger\"> {file.FileName}</p> size is incorrect";
+                        continue;
+                    }
+
+
+                    product.ProductImages.Add(
+                        new ProductImage()
+                        {
+                            ImageURL = await file.CreateFileAsync(_env.WebRootPath, "assets", "images", "website-images"),
+                            IsPrimary = null,
+                        }
+
+                        );
+                }
+                TempData["FileWarning"] = text;
+
+            }
+
+
 
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
@@ -198,6 +230,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 
             Product product = await _context.Products
                 .Include(p => p.ProductTags)
+                .Include(p => p.ProductImages)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (product is null) return NotFound();
@@ -212,6 +245,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 Categories = await _context.Categories.ToListAsync(),
                 Tags = await _context.Tags.ToListAsync(),
                 TagIds = product.ProductTags.Select(pt => pt.TagId).ToList(),
+                ProductImages = product.ProductImages,
             };
 
             return View(updateProductVM);
@@ -239,7 +273,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 }
             }
 
-            Product existsProduct = await _context.Products.Include(p => p.ProductTags).FirstOrDefaultAsync(c => c.Id == id);
+            Product existsProduct = await _context.Products.Include(p => p.ProductTags).Include(p=>p.ProductImages).FirstOrDefaultAsync(c => c.Id == id);
             if (existsProduct is null) return NotFound();
 
             if (updateProductVM.CategoryId != existsProduct.CategoryId)

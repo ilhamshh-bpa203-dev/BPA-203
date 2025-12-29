@@ -19,11 +19,11 @@
                         <input asp-for="HoverPhoto" class="form-control" accept="image/*">
                         <span class="text-danger" asp-validation-for="HoverPhoto"></span>
                     </div>
-                    @* <div class="form-group">
-                        <label for="Name">Name</label>
-                        <input asp-for="Name" class="form-control" placeholder="Image" accept="image/*">
-                        <span class="text-danger" asp-validation-for="Name"></span>
-                    </div> *@
+                    <div class="form-group">
+                        <label for="AdditionalPhoto">Additional Image</label>
+                        <input asp-for="AdditionalPhoto" class="form-control" placeholder="Image" accept="image/*">
+                        <span class="text-danger" asp-validation-for="AdditionalPhoto"></span>
+                    </div>
                     <div class="form-group">
                         <label for="Name">Name</label>
                         <input asp-for="Name" class="form-control" placeholder="Name" accept="image/*">
@@ -39,6 +39,8 @@
                         <input asp-for="SKU" class="form-control" placeholder="SKU">
                         <span class="text-danger" asp-validation-for="SKU"></span>
                     </div>
+
+                  
                     <div class="form-group">
                         <label for="CategoryId">CategoryId</label>
 

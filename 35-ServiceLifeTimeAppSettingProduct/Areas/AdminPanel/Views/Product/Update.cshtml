@@ -1,6 +1,9 @@
 ﻿@using _34_Front_To_BackSqlConnection.Models
 @model UpdateProductVM
-
+@{
+    ProductImage mainImage = Model.ProductImages.FirstOrDefault(pi => pi.IsPrimary == true);
+    ProductImage hoverImage = Model.ProductImages.FirstOrDefault(pi => pi.IsPrimary == true);
+}
 
 <div class="row">
     <div class="col-md-6 grid-margin stretch-card">
@@ -9,6 +12,40 @@
                 <h4 class="card-title">Update Product</h4>
 
                 <form class="forms-sampless" method="post" enctype="multipart/form-data">
+                    <img style="width:150px;height:150px" src="~/assets/images/website-images/@mainImage.ImageURL" alt="Alternate Text" />
+
+                    <div class="form-group">
+                        <label for="MainPhoto">Main Image</label>
+                        <input asp-for="MainPhoto" class="form-control" accept="image/*">
+                        <span class="text-danger" asp-validation-for="MainPhoto"></span>
+                    </div>
+
+                    <img style="width:150px;height:150px" src="~/assets/images/website-images/@hoverImage.ImageURL" alt="Alternate Text" />
+
+                    <div class="form-group">
+                        <label for="HoverPhoto">Secon Image</label>
+                        <input asp-for="HoverPhoto" class="form-control" accept="image/*">
+                        <span class="text-danger" asp-validation-for="HoverPhoto"></span>
+                    </div>
+
+                    <div>
+                        @foreach (var item in Model.ProductImages.Where(pi=>pi.IsPrimary==null).ToList())
+                        {
+                           <div class="position-relative">
+                                <img style="width:150px;height:150px" src="~/assets/images/website-images/@item.ImageURL" alt="Alternate Text" />
+                                <i class="cust_btn mdi mdi-close-circle" style="cursor:pointer;position:absolute;top:10px;right:10px"></i>
+                                <input asp-for="ImageIds" type="hidden"  value="@item.Id" />
+                           </div>
+                        }
+                    </div>
+                    <div class="form-group">
+                        <label for="AdditionalPhoto">Additional Image</label>
+                        <input asp-for="AdditionalPhoto" class="form-control" placeholder="Image" accept="image/*">
+                        <span class="text-danger" asp-validation-for="ImageIds"></span>
+                    </div>
+
+
+                    
                     <div class="form-group">
                         <label for="Name">Name</label>
                         <input asp-for="Name" class="form-control" placeholder="Image" accept="image/*">
@@ -53,4 +90,16 @@
         </div>
     </div>
 </div>
+
+@section DeleteBtn{
+    <script>
+        var btns = document.querySelectorAll(".cust_btn");
+        for(let i = 0;i<btns.length;i++){
+            btns[i].addEventListener("click" function (
+                btns[i].parentElement.remove();
+            )
+        })
+
+    </script>
+}
 
