@@ -257,6 +257,10 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 
             updateProductVM.Categories = await _context.Categories.ToListAsync();
             updateProductVM.Tags = await _context.Tags.ToListAsync();
+           
+            Product existsProduct = await _context.Products.Include(p => p.ProductTags).Include(p=>p.ProductImages).FirstOrDefaultAsync(c => c.Id == id);
+
+            updateProductVM.ProductImages = existsProduct.ProductImages;
 
             if (!ModelState.IsValid)
             {
@@ -273,8 +277,41 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 }
             }
 
-            Product existsProduct = await _context.Products.Include(p => p.ProductTags).Include(p=>p.ProductImages).FirstOrDefaultAsync(c => c.Id == id);
             if (existsProduct is null) return NotFound();
+
+
+            if (updateProductVM.MainPhoto is not null)
+            {
+                if (updateProductVM.MainPhoto.CheckFileType("image/"))
+                {
+                    ModelState.AddModelError(nameof(updateProductVM.MainPhoto), "Image type incorrect");
+                    return View(updateProductVM);
+                }
+                if (updateProductVM.MainPhoto.CheckFieSize(FileSize.MB, 1))
+                {
+                    ModelState.AddModelError(nameof(updateProductVM.MainPhoto), "Image size must be less then 1 mb");
+                    return View(updateProductVM);
+                }
+
+            }
+            if (updateProductVM.HoverPhoto is not null)
+            {
+                if (updateProductVM.HoverPhoto.CheckFileType("image/"))
+                {
+                    ModelState.AddModelError(nameof(updateProductVM.HoverPhoto), "Image type incorrect");
+                    return View(updateProductVM);
+                }
+                if (updateProductVM.HoverPhoto.CheckFieSize(FileSize.MB, 1))
+                {
+                    ModelState.AddModelError(nameof(updateProductVM.HoverPhoto), "Image size must be less then 1 mb");
+                    return View(updateProductVM);
+                }
+
+            }
+
+
+
+
 
             if (updateProductVM.CategoryId != existsProduct.CategoryId)
             {
@@ -295,9 +332,6 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 updateProductVM.TagIds = updateProductVM.TagIds.Distinct().ToList();
             }
 
-
-
-
             if (updateProductVM.TagIds is not null)
             {
                 _context.ProductTags.RemoveRange(existsProduct.ProductTags
@@ -312,6 +346,85 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                     .Select(tId => new ProductTag { TagId = tId, ProductId = existsProduct.Id }));
             }
 
+            if (updateProductVM.MainPhoto is not null)
+            {
+                string fileName = await updateProductVM.MainPhoto.CreateFileAsync(_env.WebRootPath, "assets", "images", "website-images");
+
+                ProductImage mainImage = existsProduct.ProductImages.FirstOrDefault(p=>p.IsPrimary==true);
+
+                mainImage.ImageURL.DeleteFile(_env.WebRootPath, "assets", "images", "website-images");
+
+                existsProduct.ProductImages.Remove(mainImage);
+
+                existsProduct.ProductImages.Add(new ProductImage
+                {
+                    ImageURL = fileName,
+                    IsPrimary = true,
+                });
+            }
+
+            if (updateProductVM.HoverPhoto is not null)
+            {
+                string fileName = await updateProductVM.HoverPhoto.CreateFileAsync(_env.WebRootPath, "assets", "images", "website-images");
+
+                ProductImage hoverImage = existsProduct.ProductImages.FirstOrDefault(p=>p.IsPrimary==false);
+
+                hoverImage.ImageURL.DeleteFile(_env.WebRootPath, "assets", "images", "website-images");
+
+                existsProduct.ProductImages.Remove(hoverImage);
+
+                existsProduct.ProductImages.Add(new ProductImage
+                {
+                    ImageURL = fileName,
+                    IsPrimary = false,
+                });
+
+            }
+
+
+
+
+            if( updateProductVM.ImageIds is null)
+            {
+                updateProductVM.ImageIds = new List<int>();
+            }
+
+            var deletedImage = existsProduct.ProductImages.Where(pi=>updateProductVM.ImageIds.Exists(imgIds=>imgIds==pi.Id) && pi.IsPrimary==null).ToList();
+
+            deletedImage.ForEach(di=>di.ImageURL.DeleteFile(_env.WebRootPath, "assets", "images", "website-images"));
+
+            _context.ProductImages.RemoveRange(deletedImage);
+
+            if (updateProductVM.AdditionalPhoto is not null)
+            {
+                string text = string.Empty;
+                foreach (IFormFile file in updateProductVM.AdditionalPhoto)
+                {
+
+                    if (file.CheckFileType("image/"))
+                    {
+                        text += $"   <p class=\"text-danger\">{file.FileName}</p>  type is incorrect";
+                        continue;
+                    }
+                    if (file.CheckFieSize(FileSize.MB, 1))
+                    {
+                        text += $"   <p class=\"text-danger\"> {file.FileName}</p> size is incorrect";
+                        continue;
+                    }
+
+
+                    existsProduct.ProductImages.Add(
+                        new ProductImage()
+                        {
+                            ImageURL = await file.CreateFileAsync(_env.WebRootPath, "assets", "images", "website-images"),
+                            IsPrimary = null,
+                        }
+
+                        );
+                }
+                TempData["FileWarning"] = text;
+
+            }
 
             existsProduct.Name = updateProductVM.Name;
             existsProduct.SKU = updateProductVM.SKU;
