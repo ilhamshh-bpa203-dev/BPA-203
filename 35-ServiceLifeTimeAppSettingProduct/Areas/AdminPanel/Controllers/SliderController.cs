@@ -27,9 +27,19 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
         [Area("adminpanel")]
         public async Task<IActionResult> Index()
         {
-            List<Slider> sliders = await _context.Sliders.ToListAsync();
+            List<SliderGetVM> sliderVMs = await _context.Sliders
+                .Select(s=>new SliderGetVM
+                {
+                    Id = s.Id,
+                    Title = s.Title,
+                    ImageURL= s.ImageURL,
+                    Order = s.Order,
+                })
+                .ToListAsync();
 
-            return View(sliders);
+
+
+            return View(sliderVMs);
         }
 
         public async Task<IActionResult> Details(int? id)
@@ -42,7 +52,18 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 
             if (slider is null) return NotFound();
 
-            return View(slider);
+            SliderDetailsVM sliderDetailsVM = new()
+            {
+                Id = slider.Id,
+                Title = slider.Title,
+                ImageURL = slider.ImageURL,
+                Order = slider.Order,
+                SubTitle = slider.SubTitle,
+                Description = slider.Description,
+            };
+
+
+            return View(sliderDetailsVM);
         }
 
         public IActionResult Create()
@@ -96,17 +117,12 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 
             if (slider is null) return NotFound();
 
-
             slider.ImageURL.DeleteFile(_env.WebRootPath, "assets", "images", "website-images");
 
-            System.IO.File.Delete(slider.ImageURL);
-
-
+            //System.IO.File.Delete(slider.ImageURL);
 
             _context.Sliders.Remove(slider);
             await _context.SaveChangesAsync();
-
-
 
             return RedirectToAction(nameof(Index));
         }

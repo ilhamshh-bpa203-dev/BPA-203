@@ -1,4 +1,4 @@
-﻿@model Category
+﻿@model DetailsCategoryVM
 
 @{
     int count = 0;
@@ -45,7 +45,7 @@
                                     @Model.Name
                                 </td>
                                 <td>
-                                    @Model.Products.Count
+                                    @Model.ProductCount
                                 </td>
                                 <td>
                                     <a class="btn btn-warning" asp-action="Update" asp-route-id="@Model.Id"><i class="mdi mdi-pencil-box"></i></a>

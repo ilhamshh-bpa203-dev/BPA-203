@@ -1,4 +1,5 @@
 ﻿using _34_Front_To_BackSqlConnection.DAL;
+using _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.ViewModels;
 using _35_ServiceLifeTimeAppSettingProduct.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
@@ -18,9 +19,15 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<Category> categories =await _context.Categories
+            List<GetCategoryVM> categories =await _context.Categories
                 .Include(c=>c.Products)
                 .Where(c=>c.IsDeleted == false)
+                .Select(c=> new GetCategoryVM
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    ProductCount=c.Products.Count
+                })
                 .ToListAsync();
 
             return View(categories);
@@ -32,7 +39,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Category category)
+        public async Task<IActionResult> Create(CreateCategoryVM createCategoryVM)
         {
 
             if (!ModelState.IsValid)
@@ -41,13 +48,20 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 
             }
 
-            bool existsCategory = await _context.Categories.AnyAsync(c=>c.Name.Trim()==category.Name.Trim());
+            bool existsCategory = await _context.Categories.AnyAsync(c=>c.Name.Trim()== createCategoryVM.Name.Trim());
+
+            Category category = new()
+            {
+                Name = createCategoryVM.Name,
+
+            };
 
             if (existsCategory)
             {
                 ModelState.AddModelError("Name", "Category already exists");
                 return View();
             }
+           
 
             await _context.Categories.AddAsync(category);
             await _context.SaveChangesAsync();
@@ -62,18 +76,20 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
         {
             if (id is null || id < 1) return BadRequest();
 
-            Category existsCategory = await _context.Categories
+            UpdateCategoryVM existsCategory = await _context.Categories
+                .Select(c=> new UpdateCategoryVM
+                {
+                    Id = c.Id,
+                    Name=c.Name,
+                })
                 .FirstOrDefaultAsync(c=>c.Id == id);
-
             if (existsCategory is null) return NotFound();
-
-
 
             return View(existsCategory);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Update(int? id,Category category)
+        public async Task<IActionResult> Update(int? id,UpdateCategoryVM updateCategoryVM)
         {
             if (id is null || id < 1) return BadRequest();
 
@@ -88,15 +104,15 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             }
 
             bool isExistsCategory = await _context.Categories
-                .AnyAsync(c=>c.Name.Trim() == category.Name.Trim() && c.Id != category.Id);
+                .AnyAsync(c=>c.Name.Trim() == updateCategoryVM.Name.Trim() && c.Id != id);
 
             if (isExistsCategory)
             {
-                ModelState.AddModelError(nameof(category.Name), "Category already Exists");
-                return View();
+                ModelState.AddModelError(nameof(updateCategoryVM.Name), "Category already Exists");
+                return View(updateCategoryVM);
             }
 
-            existsCategory.Name = category.Name;
+            existsCategory.Name = updateCategoryVM.Name;
 
             _context.Categories.Update(existsCategory);
             
@@ -145,14 +161,20 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             if (id is null || id < 1) return BadRequest();
 
 
-            Category categories = await _context.Categories
+            DetailsCategoryVM detailsCategoryVM = await _context.Categories
                 .Include(c => c.Products)
                 .Where(c => c.Id == id)
+                .Select(c => new DetailsCategoryVM
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    ProductCount = c.Products.Count,
+                })
                 .FirstOrDefaultAsync();
            
-            if (categories is null) return NotFound();
+            if (detailsCategoryVM is null) return NotFound();
 
-            return View(categories);
+            return View(detailsCategoryVM);
         }
 
 

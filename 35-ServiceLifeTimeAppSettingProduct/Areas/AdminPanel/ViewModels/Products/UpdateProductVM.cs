@@ -21,5 +21,8 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.ViewModels
         public List<Tag>? Tags { get; set; }
         public List<ProductImage> ProductImages { get; set; }
         public List<int>? ImageIds { get; set; }
+
+        public  List<int>? SizeIds { get; set; }
+        public List<Size>? Sizes { get; set; }
     }
 }

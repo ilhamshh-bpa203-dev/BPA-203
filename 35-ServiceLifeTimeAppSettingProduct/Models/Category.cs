@@ -7,7 +7,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Models
     public class Category:BaseEntity
     {
         //[Required (ErrorMessage ="Bos olmaz")]
-        [MaxLength(25, ErrorMessage=" Category cant be more than 20 ") ]
+        [MaxLength(25, ErrorMessage=" Category cant be more than 25 ") ]
         public  string Name{ get; set; }
         public List<Product>? Products { get; set; }
     }

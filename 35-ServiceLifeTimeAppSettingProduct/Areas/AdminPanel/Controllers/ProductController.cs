@@ -66,19 +66,19 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return View(getProductVM);
         }
 
-
         [HttpGet]
         public async Task<IActionResult> Create()
         {
             List<Category> categories = await _context.Categories.ToListAsync();
             List<Tag> tags = await _context.Tags.ToListAsync();
-
+            List<Size> sizes = await _context.Sizes.ToListAsync();
 
 
             CreateProductVM createProductVM = new()
             {
                 Categories = categories,
-                Tags = tags
+                Tags = tags,
+                Sizes = sizes
             };
 
             return View(createProductVM);
@@ -88,6 +88,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
         {
             createProductVM.Categories = await _context.Categories.ToListAsync();
             createProductVM.Tags = await _context.Tags.ToListAsync();
+            createProductVM.Sizes = await _context.Sizes.ToListAsync();
 
             if (createProductVM.Price < 0)
             {
@@ -101,23 +102,23 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             }
 
 
-            if (createProductVM.MainPhoto.CheckFileType("image/"))
+            if (!createProductVM.MainPhoto.CheckFileType("image/"))
             {
                 ModelState.AddModelError(nameof(createProductVM.MainPhoto), "Image type incorrect");
                 return View(createProductVM);
             }
-            if (createProductVM.MainPhoto.CheckFieSize(FileSize.MB, 1))
+            if (!createProductVM.MainPhoto.CheckFieSize(FileSize.MB, 1))
             {
                 ModelState.AddModelError(nameof(createProductVM.MainPhoto), "Image size must be less then 1 mb");
                 return View(createProductVM);
             }
 
-            if (createProductVM.HoverPhoto.CheckFileType("image/"))
+            if (!createProductVM.HoverPhoto.CheckFileType("image/"))
             {
                 ModelState.AddModelError(nameof(createProductVM.HoverPhoto), "Image type incorrect");
                 return View(createProductVM);
             }
-            if (createProductVM.HoverPhoto.CheckFieSize(FileSize.MB, 1))
+            if (!createProductVM.HoverPhoto.CheckFieSize(FileSize.MB, 1))
             {
                 ModelState.AddModelError(nameof(createProductVM.HoverPhoto), "Image size must be less then 1 mb");
                 return View(createProductVM);
@@ -142,6 +143,16 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 if (existsTag)
                 {
                     ModelState.AddModelError(nameof(CreateProductVM.TagIds), "Tag not exists");
+                    return View(createProductVM);
+                }
+            }
+
+            if (createProductVM.SizeIds is not null)
+            {
+                bool existsSize = createProductVM.SizeIds.Any(sId => !createProductVM.Sizes.Exists(s=>s.Id == sId));
+                if (existsSize)
+                {
+                    ModelState.AddModelError(nameof(CreateProductVM.SizeIds), "Size not found");
                     return View(createProductVM);
                 }
             }
@@ -182,18 +193,26 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 }).ToList();
             }
 
+            if (createProductVM.SizeIds is not null)
+            {
+                product.ProductSizes = createProductVM.SizeIds.Select(sId => new ProductSize
+                {
+                    SizeId = sId,
+                }).ToList();
+            }
+
             if (createProductVM.AdditionalPhoto is not null)
             {
                 string text = string.Empty;
                 foreach (IFormFile file in createProductVM.AdditionalPhoto)
                 {
 
-                    if (file.CheckFileType("image/"))
+                    if (!file.CheckFileType("image/"))
                     {
                         text += $"   <p class=\"text-danger\">{file.FileName}</p>  type is incorrect";
                         continue;
                     }
-                    if (file.CheckFieSize(FileSize.MB, 1))
+                    if (!file.CheckFieSize(FileSize.MB, 1))
                     {
                         text += $"   <p class=\"text-danger\"> {file.FileName}</p> size is incorrect";
                         continue;
@@ -230,6 +249,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 
             Product product = await _context.Products
                 .Include(p => p.ProductTags)
+                .Include(p => p.ProductSizes)
                 .Include(p => p.ProductImages)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
@@ -246,6 +266,9 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 Tags = await _context.Tags.ToListAsync(),
                 TagIds = product.ProductTags.Select(pt => pt.TagId).ToList(),
                 ProductImages = product.ProductImages,
+                Sizes = await _context.Sizes.ToListAsync(),
+                SizeIds= product.ProductSizes.Select(ps => ps.SizeId).ToList(),
+
             };
 
             return View(updateProductVM);
@@ -257,8 +280,13 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 
             updateProductVM.Categories = await _context.Categories.ToListAsync();
             updateProductVM.Tags = await _context.Tags.ToListAsync();
+            updateProductVM.Sizes=await _context.Sizes.ToListAsync();
            
-            Product existsProduct = await _context.Products.Include(p => p.ProductTags).Include(p=>p.ProductImages).FirstOrDefaultAsync(c => c.Id == id);
+            Product existsProduct = await _context.Products
+                .Include(p => p.ProductTags)
+                .Include(p=>p.ProductImages)
+                .Include(p=>p.ProductSizes)
+                .FirstOrDefaultAsync(c => c.Id == id);
 
             updateProductVM.ProductImages = existsProduct.ProductImages;
 
@@ -273,6 +301,16 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 if (existsTag)
                 {
                     ModelState.AddModelError(nameof(CreateProductVM.TagIds), "Tag not exists");
+                    return View(updateProductVM);
+                }
+            }
+
+            if (updateProductVM.SizeIds is not null)
+            {
+                bool existsTag = updateProductVM.SizeIds.Any(sId => !updateProductVM.Sizes.Exists(s => s.Id == sId));
+                if (existsTag)
+                {
+                    ModelState.AddModelError(nameof(CreateProductVM.SizeIds), "Size not exists");
                     return View(updateProductVM);
                 }
             }
@@ -332,6 +370,16 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                 updateProductVM.TagIds = updateProductVM.TagIds.Distinct().ToList();
             }
 
+            if (updateProductVM.Tags is null)
+            {
+                updateProductVM.Tags = new();
+            }
+            else 
+            {
+                updateProductVM.TagIds = updateProductVM.TagIds.Distinct().ToList();
+            }
+
+
             if (updateProductVM.TagIds is not null)
             {
                 _context.ProductTags.RemoveRange(existsProduct.ProductTags
@@ -344,6 +392,13 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
                     .Exists(pTag => pTag.TagId == tId))
                     .ToList()
                     .Select(tId => new ProductTag { TagId = tId, ProductId = existsProduct.Id }));
+            }
+
+            if (updateProductVM.SizeIds is not null)
+            {
+                _context.ProductSizes.RemoveRange(existsProduct.ProductSizes
+                    .Where(pSize => !updateProductVM.SizeIds.Exists(sId=> sId == pSize.SizeId))
+                    .ToList());
             }
 
             if (updateProductVM.MainPhoto is not null)
@@ -432,12 +487,27 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             existsProduct.Price = updateProductVM.Price.Value;
             existsProduct.Description = updateProductVM.Description;
 
+
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
 
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (id < 1) return BadRequest();
 
+            Product product = await _context.Products.Include(p=>p.ProductImages).FirstOrDefaultAsync(p => p.Id == id);
+
+            if (product == null) return NotFound();
+
+            product.ProductImages.ForEach(pi => pi.ImageURL.DeleteFile(_env.WebRootPath, "assets", "images", "website-images") );
+
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
 
 
 

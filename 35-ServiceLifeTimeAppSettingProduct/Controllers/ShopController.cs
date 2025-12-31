@@ -30,6 +30,8 @@ namespace _34_Front_To_BackSqlConnection.Controllers
                 .Include(p=>p.ProductImages)
                 .Include(p=>p.ProductTags)
                 .ThenInclude(pt=>pt.Tag)
+                .Include(p=>p.ProductSizes)
+                .ThenInclude(ps=>ps.Size)
                 .FirstOrDefaultAsync(p => p.Id == id);
 
             if (product == null) return NotFound();
