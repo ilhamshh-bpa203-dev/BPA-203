@@ -9,10 +9,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 {
     [Area("AdminPanel")]
+    [Authorize("Admin,Moderator,Member")]
     public class ProductController : Controller
     {
         private readonly AppDBContext _context;
@@ -43,6 +45,9 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return View(getProductVMs);
         }
 
+
+        [Authorize("Admin,Moderator")]
+
         [HttpGet]
         public async Task<IActionResult> Details(int? id)
         {
@@ -67,6 +72,8 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return View(getProductVM);
         }
 
+
+        [Authorize("Admin,Moderator")]
         [HttpGet]
         public async Task<IActionResult> Create()
         {
@@ -242,6 +249,9 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return RedirectToAction(nameof(Index));
 
         }
+       
+
+        [Authorize("Admin,Moderator")]
         [HttpGet]
         public async Task<IActionResult> Update(int? id)
         {
@@ -526,6 +536,8 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+        [Authorize("Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             if (id < 1) return BadRequest();

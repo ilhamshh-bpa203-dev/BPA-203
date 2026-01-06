@@ -1,6 +1,7 @@
 ﻿using _34_Front_To_BackSqlConnection.DAL;
 using _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.ViewModels;
 using _35_ServiceLifeTimeAppSettingProduct.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,8 @@ using System.Threading.Tasks;
 namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 {
     [Area("AdminPanel")]
+    [Authorize("Admin,Moderator,Member")]
+
     public class CategoryController : Controller
     {
         private readonly AppDBContext _context;
@@ -33,6 +36,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return View(categories);
         }
 
+        [Authorize("Admin,Moderator")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -70,7 +74,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
+        [Authorize("Admin,Moderator")]
         [HttpGet]
         public async Task<IActionResult> Update(int? id)
         {
@@ -122,6 +126,30 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize("Admin,Moderator")]
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id is null || id < 1) return BadRequest();
+
+
+            DetailsCategoryVM detailsCategoryVM = await _context.Categories
+                .Include(c => c.Products)
+                .Where(c => c.Id == id)
+                .Select(c => new DetailsCategoryVM
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    ProductCount = c.Products.Count,
+                })
+                .FirstOrDefaultAsync();
+           
+            if (detailsCategoryVM is null) return NotFound();
+
+            return View(detailsCategoryVM);
+        }
+
+
+        [Authorize("Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id is null || id < 1) return BadRequest();
@@ -155,28 +183,6 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id is null || id < 1) return BadRequest();
-
-
-            DetailsCategoryVM detailsCategoryVM = await _context.Categories
-                .Include(c => c.Products)
-                .Where(c => c.Id == id)
-                .Select(c => new DetailsCategoryVM
-                {
-                    Id = c.Id,
-                    Name = c.Name,
-                    ProductCount = c.Products.Count,
-                })
-                .FirstOrDefaultAsync();
-           
-            if (detailsCategoryVM is null) return NotFound();
-
-            return View(detailsCategoryVM);
-        }
-
 
     }
 }

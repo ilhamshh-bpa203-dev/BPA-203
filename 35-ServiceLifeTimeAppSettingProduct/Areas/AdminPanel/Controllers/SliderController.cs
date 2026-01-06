@@ -4,6 +4,7 @@ using _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.ViewModels;
 using _35_ServiceLifeTimeAppSettingProduct.Models;
 using _35_ServiceLifeTimeAppSettingProduct.Utilities.Enums;
 using _35_ServiceLifeTimeAppSettingProduct.Utilities.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NuGet.ContentModel;
@@ -13,6 +14,7 @@ using static System.Net.Mime.MediaTypeNames;
 namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 {
     [Area("Adminpanel")]
+    [Authorize("Admin,Moderator,Member")]
     public class SliderController : Controller
     {
         private readonly AppDBContext _context;
@@ -24,7 +26,6 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             _env = env;
         }
 
-        [Area("adminpanel")]
         public async Task<IActionResult> Index()
         {
             List<SliderGetVM> sliderVMs = await _context.Sliders
@@ -42,6 +43,8 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return View(sliderVMs);
         }
 
+
+        [Authorize("Admin,Moderator")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id is null || id < 1) return BadRequest();
@@ -66,6 +69,9 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return View(sliderDetailsVM);
         }
 
+
+
+        [Authorize("Admin,Moderator")]
         public IActionResult Create()
         {
             return View();
@@ -107,26 +113,8 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        public async Task<IActionResult> Delete(int? id) 
-        {
-            if (id is null || id < 1) return BadRequest();
 
-
-            Slider slider = await _context.Sliders
-                .FirstOrDefaultAsync(c => c.Id == id);
-
-            if (slider is null) return NotFound();
-
-            slider.ImageURL.DeleteFile(_env.WebRootPath, "assets", "images", "website-images");
-
-            //System.IO.File.Delete(slider.ImageURL);
-
-            _context.Sliders.Remove(slider);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(Index));
-        }
-
+        [Authorize("Admin,Moderator")]
         [HttpGet]
         public async Task<IActionResult> Update(int? id)
         {
@@ -190,6 +178,28 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
             slider.SubTitle = sliderUpdateVM.SubTitle;
             slider.Order = sliderUpdateVM.Order;
 
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        [Authorize("Admin")]
+        public async Task<IActionResult> Delete(int? id) 
+        {
+            if (id is null || id < 1) return BadRequest();
+
+
+            Slider slider = await _context.Sliders
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (slider is null) return NotFound();
+
+            slider.ImageURL.DeleteFile(_env.WebRootPath, "assets", "images", "website-images");
+
+            //System.IO.File.Delete(slider.ImageURL);
+
+            _context.Sliders.Remove(slider);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
