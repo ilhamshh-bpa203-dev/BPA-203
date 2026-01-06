@@ -1,10 +1,12 @@
 ﻿using _34_Front_To_BackSqlConnection.Models;
 using _35_ServiceLifeTimeAppSettingProduct.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace _34_Front_To_BackSqlConnection.DAL
 {
-    public class AppDBContext : DbContext
+    public class AppDBContext : IdentityDbContext<AppUser>
     {
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options) { }
 
