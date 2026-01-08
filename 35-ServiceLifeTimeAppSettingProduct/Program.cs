@@ -1,6 +1,8 @@
 
 using _34_Front_To_BackSqlConnection.DAL;
 using _35_ServiceLifeTimeAppSettingProduct.Models;
+using _35_ServiceLifeTimeAppSettingProduct.Services.Implementation;
+using _35_ServiceLifeTimeAppSettingProduct.Services.Interface;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +22,8 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 
     opt.User.RequireUniqueEmail = true;
 
+    opt.SignIn.RequireConfirmedEmail = true;
+
     opt.Lockout.AllowedForNewUsers = true;
     opt.Lockout.MaxFailedAccessAttempts = 3;
     opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
@@ -27,7 +31,10 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 
 }).AddEntityFrameworkStores<AppDBContext>().AddDefaultTokenProviders();
 
+builder.Services.AddScoped<ILayoutService, LayoutService>();
+
 var app = builder.Build();
+
 
 app.UseAuthentication();
 app.UseAuthorization();
