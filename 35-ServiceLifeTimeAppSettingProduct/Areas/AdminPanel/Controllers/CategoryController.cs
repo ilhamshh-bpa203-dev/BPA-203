@@ -11,7 +11,7 @@ namespace _35_ServiceLifeTimeAppSettingProduct.Areas.AdminPanel.Controllers
 {
     [Area("AdminPanel")]
     [Authorize("Admin,Moderator,Member")]
-
+    [AutoValidateAntiforgeryToken]
     public class CategoryController : Controller
     {
         private readonly AppDBContext _context;

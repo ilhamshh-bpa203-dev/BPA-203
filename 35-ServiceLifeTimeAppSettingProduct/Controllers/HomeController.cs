@@ -8,10 +8,11 @@ namespace _34_Front_To_BackSqlConnection.Controllers
 {
     public class HomeController : Controller
     {
-       private readonly AppDBContext _context;
+        private readonly AppDBContext _context;
+
         public HomeController(AppDBContext context)
         {
-         _context = context;    
+            _context = context;
         }
         public IActionResult Index()
         {
@@ -21,7 +22,9 @@ namespace _34_Front_To_BackSqlConnection.Controllers
             List<Slider> sliders = _context.Sliders.ToList();
             List<Shipping> shippings = _context.Shippings.ToList();
             List<Client> clients = _context.Clients.ToList();
-            List<Product> products = _context.Products
+
+            List<Product> newProducts = _context.Products
+                .OrderByDescending(p=>p.CreatedAt)
                 .Include(p => p.ProductImages.Where(pi=>pi.IsPrimary != null))
                 .ToList();
 
@@ -31,8 +34,7 @@ namespace _34_Front_To_BackSqlConnection.Controllers
                 Sliders = sliders,
                 Shippings = shippings,
                 Clients = clients,
-                Products = products,
-
+                NewProducts = newProducts
             };
 
             return View(homeVM);
